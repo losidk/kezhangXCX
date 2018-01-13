@@ -1,0 +1,28 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix:after{
+	content:'';
+	display:block;
+	height:0;
+	clear:both;
+	visibility:none;
+}
+/*删除button默认边框*/
+button::after{
+	border:none;
+}
+/*按钮按下去的样式类*/
+

@@ -1,0 +1,17 @@
+<!--search.wxml-->
+<view class="search-container" style="background: url('../../images/search.png') no-repeat">
+  <!-- 查询页 -->
+  <view class="search-box fr" style="background:pink url('../../images/search-box.png') no-repeat center center">
+  		<textarea name="" id="" class="search-area" placeholder="  输入文字"></textarea>
+			<view class="caret"></view>
+			<!-- 名家 -->
+  		<button type="default" size="default" value="" class="choose-author" style="background: url('../../images/author.png') no-repeat center center" bindtap="chooseAuthorHandle"></button>
+  		<scroll-view animation="{{animationData}}" class="author-list" >
+
+  		</scroll-view>
+  		<!-- 查询 -->
+  		<button type="default" size="default" value="" class="search-btn" style="background:url('../../images/search-btn.png') no-repeat center center"></button>
+
+  </view>
+
+</view>

@@ -1,0 +1,67 @@
+/*引导页css*/
+.search-container{
+	width:750rpx;
+	height:1200rpx;
+}
+/*搜索框（选择名家、搜索按钮）*/
+.search-box{
+	width:160rpx;
+	padding:0;
+	height:972rpx;
+	margin:0;
+	box-sizing: border-box;
+	margin-right:68rpx;
+	margin-top:140rpx;
+	display:flex;
+	position: relative;
+}
+
+.search-area{
+	box-sizing: border-box;
+	padding:40rpx 0;
+	width:74rpx;
+	height:440rpx;
+	background-color: pink;
+	position: absolute;
+	/*z-index: 999;*/
+	top:48rpx;
+	left:51rpx;
+	text-align: center;
+	/*光标隐藏*/
+	/*caret-color: transparent;*/
+}
+/*自定义光标*/
+/*.caret{
+	width:60rpx;
+	height:4rpx;
+	background-color: #BAA99A;
+	position: absolute;
+	top:66rpx;
+	left:56rpx;
+}*/
+
+/*选择名家*/
+.choose-author,.search-btn{
+	width:88rpx;
+	height:216rpx;
+	background-color: pink;
+	position: absolute;
+	top:486rpx;
+	left:44rpx;
+	outline:none;
+	padding:0;
+}
+/*名家列表*/
+.author-list{
+	height:432rpx;
+	width:0rpx;
+	background-color: pink;
+	position: absolute;
+	left:0rpx;
+	bottom:52rpx;
+}
+/*查询按钮*/
+.search-btn{
+	top:703rpx;
+}
+

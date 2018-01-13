@@ -1,0 +1,19 @@
+/*引导页css*/
+
+.guide{
+	flex:1;
+	width:750rpx;
+	padding:0;
+	height:1200rpx;
+	margin:0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.guide image{
+	flex:1;
+	width:750rpx;
+	height:1200rpx;
+}
+.btn-hover{
+	background-color: blue;
+}
