@@ -9,9 +9,7 @@
   		<scroll-view animation="{{animationData}}" class="author-list" >
 
 					<view class="author-item fl" wx:for="{{authorList}}" wx:key="{{item.id}}">
-						<!-- <navigator url="../item/item"> -->
-						{{item.author}}
-					<!-- </navigator> -->
+						<navigator url="">{{item.author}}</navigator>
 					</view>
 
   		</scroll-view>

@@ -21,7 +21,7 @@
 	padding:40rpx 0;
 	width:74rpx;
 	height:440rpx;
-	background-color: #fff;
+	background-color: pink;
 	position: absolute;
 	/*z-index: 999;*/
 	top:48rpx;
