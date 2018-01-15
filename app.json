@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/search/search",
+    "pages/author-intro/author-intro",
     "pages/guide/guide",
-    "pages/item/item"
+    "pages/item/item",
+    "pages/author/author"
   ],
   "window":{
     "backgroundTextStyle":"light",

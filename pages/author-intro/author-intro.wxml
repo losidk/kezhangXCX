@@ -1,0 +1,32 @@
+<!--名家介绍.wxml-->
+<view style="background:url('../../images/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
+	<!-- 名家介绍 -->
+	<view class="author-intro clearfix">
+		<!-- 名家、翻页 -->
+		<view class="left fl" style="background:url('../../images/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+			<!-- 作者 -->
+			<view class="author">
+			{{searchResult.author}}
+			</view>
+			<!-- 翻页 -->
+			<button class="next" type="default" size="default"></button>
+		</view>
+		<!-- 个人简介 -->
+		<scroll-view scroll-y class="right fr clearfix">
+			<!-- 头像、代表作品 -->
+			<view class="inner-left fl">
+				<!-- 头像 -->
+				<view class="photo">
+					<image src="{{authorInfo.img}}" mode="widthFix"></image>
+				</view>
+				<!-- 代表作品 -->
+				<view class="product">
+					<image src="{{authorInfo.productImg}}" mode="widthFix"></image>
+				</view>
+			</view>
+			<!-- 简介 -->
+			<view scroll-x class="inner-right fl">{{authorInfo.intro}}
+			</view>
+		</scroll-view>
+	</view>
+</view>

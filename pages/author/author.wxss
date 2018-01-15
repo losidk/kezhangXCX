@@ -1,13 +1,12 @@
-/*引导页css*/
 .search-container{
 	width:750rpx;
 	height:1200rpx;
 	position: relative;
 	overflow: hidden;
 }
-/*搜索结果页*/
+/*名家个人主页*/
 .search-result{
-	width:536rpx;
+	width:696rpx;
 	height:974rpx;
 	margin-top:138rpx;
 	background-color: #fff;
@@ -38,7 +37,7 @@
 }
 /*单个印章列表*/
 .search-result .right{
-	width:486rpx;
+	width:640rpx;
 	height:974rpx;
 }
 /*单个印章*/
@@ -47,7 +46,7 @@
 	height:489rpx;
 	background-color: #fff;
 	border:4rpx solid #BFB6AD;
-	margin-left:-4rpx;
+	margin-right:-4rpx;
 	margin-top:-4rpx;
 	padding:0;
 }

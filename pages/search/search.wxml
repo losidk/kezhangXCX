@@ -1,13 +1,13 @@
 <!--search.wxml-->
 <view style="background:url('../../images/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 	<!-- 搜索结果页面 -->
-	<view class="search-result clearfix">
+	<view class="search-result clearfix" style="background:url('../../images/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx">
 		<!-- 名家、翻页 -->
 		<view class="left fl" style="background:url('../../images/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 			<!-- 作者 -->
-			<view class="author">
+			<navigator url="../author/author" class="author">
 			{{searchResult.author}}
-			</view>
+			</navigator>
 			<!-- 翻页 -->
 			<button class="next" type="default" size="default"></button>
 		</view>
