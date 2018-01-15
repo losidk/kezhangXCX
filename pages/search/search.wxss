@@ -3,7 +3,70 @@
 	width:750rpx;
 	height:1200rpx;
 	position: relative;
+	overflow: hidden;
 }
+/*搜索结果页*/
+.search-result{
+	width:536rpx;
+	height:974rpx;
+	margin-top:138rpx;
+	background-color: #fff;
+}
+/*名家、翻页*/
+.search-result .left{
+	width:50rpx;
+	height:974rpx;
+	position: relative;
+}
+/*名家*/
+.author{
+	width:50rpx;
+	height:160rpx;
+	background-color: #D4CBB8;
+	margin-top:44rpx;
+	margin-bottom:580rpx;
+	color:#fff;
+	text-align: center;
+}
+/*翻下页*/
+.next[type='default']{
+	width:44rpx;
+	height:160rpx;
+	background-color: transparent;
+	padding-left:0;
+	padding-right:0;
+}
+/*单个印章列表*/
+.search-result .right{
+	width:486rpx;
+	height:974rpx;
+}
+/*单个印章*/
+.search-result .right .item{
+	width:156rpx;
+	height:489rpx;
+	background-color: #fff;
+	border:4rpx solid #BFB6AD;
+	margin-left:-4rpx;
+	margin-top:-4rpx;
+	padding:0;
+}
+.search-result .right .item image{
+	margin-top:50rpx;
+	width:156rpx;
+	/*height:156rpx;*/
+}
+/*简介描述*/
+.search-result .right .item .desc{
+	margin:0 auto;
+	padding-top:20rpx;
+	text-align: center;
+	width:74rpx;
+	height:238rpx;
+	background-color: #fff;
+	color:#9E8768;
+}
+
 /*搜索框（选择名家、搜索按钮）*/
 .search-box{
 	width:160rpx;
