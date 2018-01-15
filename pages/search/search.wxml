@@ -1,5 +1,6 @@
 <!--search.wxml-->
 <view style="background:url('../../images/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
+
 	<!-- 搜索结果页面 -->
 	<view class="search-result clearfix" style="background:url('../../images/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx">
 		<!-- 名家、翻页 -->
@@ -28,12 +29,12 @@
   		<textarea name="" id="" class="search-area" placeholder="输入文字"></textarea>
 			<!-- <view class="caret"></view> -->
 			<!-- 名家 -->
-  		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle">篆刻名家</button>
-  		<scroll-view scroll-y animation="{{animationData}}" class="author-list" >
+  		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle" >篆刻名家</button>
+  		<scroll-view scroll-y animation="{{animationData}}" class="author-list" bindscrolltolower="loadMoreHandle" >
 
 					<button type="default" size="default" class="author-item fl" wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="chooseAuthorHandle">
 						<!-- <navigator url="../item/item"> -->
-						{{item.author}}
+						{{item.name}}
 					<!-- </navigator> -->
 					</button>
 
