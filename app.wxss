@@ -21,6 +21,11 @@
 	visibility:none;
 }
 /*删除button默认边框*/
+button[type="default"]{
+	background-color: #BAA99A;
+	border-radius: 0;
+	color:#fff;
+}
 button::after{
 	border:none;
 }

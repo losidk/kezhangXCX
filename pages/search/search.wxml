@@ -1,22 +1,22 @@
 <!--search.wxml-->
-<view class="search-container" style="background: url('../../images/search.png') no-repeat">
+<view style="background:url('../../images/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
   <!-- 查询页 -->
-  <view class="search-box fr" style="background:pink url('../../images/search-box.png') no-repeat center center">
-  		<textarea name="" id="" class="search-area" placeholder="  输入文字"></textarea>
+  <view class="search-box fr" style="background:url('../../images/search-box.png') no-repeat center center;background-size: 160rpx 972rpx;">
+  		<textarea name="" id="" class="search-area" placeholder="输入文字"></textarea>
 			<view class="caret"></view>
 			<!-- 名家 -->
-  		<button type="default" size="default" value="" class="choose-author" style="background: url('../../images/author.png') no-repeat center center" bindtap="chooseAuthorHandle"></button>
+  		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle">篆刻名家</button>
   		<scroll-view animation="{{animationData}}" class="author-list" >
 
-					<view class="author-item fl" wx:for="{{authorList}}" wx:key="{{item.id}}">
+					<button type="default" size="default" class="author-item fl" wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="chooseAuthorHandle">
 						<!-- <navigator url="../item/item"> -->
 						{{item.author}}
 					<!-- </navigator> -->
-					</view>
+					</button>
 
   		</scroll-view>
   		<!-- 查询 -->
-  		<button type="default" size="default" value="" class="search-btn" style="background:url('../../images/search-btn.png') no-repeat center center"></button>
+  		<button type="default" size="default" value="" class="search-btn" >搜索</button>
 
   </view>
 

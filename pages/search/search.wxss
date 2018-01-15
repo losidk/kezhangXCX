@@ -2,6 +2,7 @@
 .search-container{
 	width:750rpx;
 	height:1200rpx;
+	position: relative;
 }
 /*搜索框（选择名家、搜索按钮）*/
 .search-box{
@@ -10,10 +11,13 @@
 	height:972rpx;
 	margin:0;
 	box-sizing: border-box;
-	margin-right:68rpx;
-	margin-top:140rpx;
+	/*margin-right:68rpx;*/
+	/*margin-top:140rpx;*/
+	position: absolute;
+	right:64rpx;
+	top:140rpx;
 	display:flex;
-	position: relative;
+
 }
 
 .search-area{
@@ -42,14 +46,19 @@
 
 /*选择名家*/
 .choose-author,.search-btn{
-	width:88rpx;
-	height:216rpx;
+	width:64rpx;
+	height:218rpx;
+	line-height:50rpx;
 	background-color: pink;
 	position: absolute;
-	top:486rpx;
-	left:44rpx;
+	top:488rpx;
+	left:56rpx;
 	outline:none;
-	padding:0;
+	padding:20rpx 10rpx 0;
+	font-size:36rpx;
+}
+.search-btn{
+	padding-top:100rpx;
 }
 /*名家列表*/
 .author-list{
@@ -64,10 +73,18 @@
 .author-item{
 	padding-top:50rpx;
 	box-sizing: border-box;
+	border:1rpx solid #fff;
+	border-top:none;
 	width:60rpx;
 	height:216rpx;
+	line-height:50rpx;
 	text-align: center;
-	background-color: green;
+	background-color: #BAA99A;
+	margin-right:-1rpx;
+	/*margin-bottom:-1rpx;*/
+	color:#fff;
+	font-size: 32rpx;
+	padding-left:10rpx;
 }
 /*查询按钮*/
 .search-btn{
