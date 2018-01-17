@@ -12,8 +12,8 @@ Page({
       "productImg":'../../images/stemp.png'
     }
   },
-  onLoad: function () {
-
+  onLoad: function (e) {
+    console.log(e);
   },
   onReady:function(){
     this.animationData = wx.createAnimation({
