@@ -129,6 +129,7 @@ Page({
           },
           dataType:'json',
           success:function(res){
+
             // 错误处理
             if(res.statusCode!=200){
               wx.showToast({
@@ -166,6 +167,7 @@ Page({
           },
           dataType:'json',
           success:function(res){
+            console.log(res);
             // 错误处理
             if(res.statusCode!=200){
               wx.showToast({
@@ -242,7 +244,7 @@ Page({
       }else{
         // 跳转到名家详情页
         wx.navigateTo({
-          url:'../author-intro/author-intro?id='+this.data.activeId
+          url:'../author-intro/author-intro?logiciansId='+this.data.activeId
         })
       }
     }

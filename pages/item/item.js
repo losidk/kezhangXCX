@@ -1,190 +1,20 @@
-//index.js
+//item.js 章详情页
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    authorListStatus:true,
-    authorList:[
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      },
-      {
-        id:1,
-        author:'吴让之'
-      }
-    ],
-    searchResult:{
-      "author":"王福庵",
-      "list":[
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-        {
-          "id":1,
-          "img":"../../images/stemp.png",
-          "desc":"王禔王禔",
-        },
-      ]
-    }
-    ,
-    animationData:'',
-
+    stampId:-1,
+    stampDesc:{},
+    animationData:''//释文、边款、详情列表动画
   },
-  onLoad: function () {
-
+  onLoad: function (e) {
+    // console.log(e);
+    this.setData({
+      'stampId':e.stampId-0
+    });
+    // console.log(this.data.stampId);
+    this.loadStampDesc();
   },
   onReady:function(){
     this.animationData = wx.createAnimation({
@@ -192,20 +22,48 @@ Page({
       timingFunction:'ease',
     })
   },
-  //点击显示(隐藏)名家
+  //点击显示(隐藏)释文、边款、详情列表
   chooseAuthorHandle:function(){
     if(this.data.authorListStatus){
-      this.animationData.left('-454rpx').width('510rpx').step()
-      this.setData({
-        'authorListStatus':false,
-        'animationData':this.animationData.export(),
-      })
+    // 打开释文、边款、详情列表
+      this.openAuthorListHandle();
     }else{
-      this.animationData.left('20rpx').width(0).step();
-      this.setData({
-        'authorListStatus':true,
-        'animationData':this.animationData.export(),
-      });
+      // 关闭释文、边款、详情列表
+      this.closeAuthorListHandle();
     }
+  },
+  //打开释文、边款、详情列表
+  openAuthorListHandle:function(){
+    this.animationData.left('-476rpx').width('584rpx').step();
+    this.setData({
+      'authorListStatus':false,
+      'animationData':this.animationData.export(),
+    })
+  },
+  //关闭释文、边款、详情列表
+  closeAuthorListHandle:function(){
+    this.animationData.left('20rpx').width(0).step();
+    this.setData({
+      'authorListStatus':true,
+      'animationData':this.animationData.export(),
+      'activeId':-1
+    });
+  },
+  // 加载印章详情：
+  loadStampDesc:function(){
+    var _this = this;
+    wx.request({
+      url:app.globalData.baseUrl+'api/stamp/stampDetailQry',
+      data:{
+        stampId:this.data.stampId
+      },
+      success:function(res){
+        console.log(res);
+        _this.setData({
+          'stampDesc':res.data.data
+        });
+        console.log(_this.data.stampDesc);
+      }
+    });
   }
 })

@@ -1,19 +1,18 @@
-/*引导页css*/
-.search-container{
+/*item 印章详情页*/
+.item-container{
 	width:750rpx;
 	height:1200rpx;
 	position: relative;
 	overflow: hidden;
 }
 /*搜索结果页*/
-.search-result{
-	width:536rpx;
+.item-result{
+	width:636rpx;
 	height:974rpx;
 	margin-top:138rpx;
-	background-color: #fff;
 }
 /*名家、翻页*/
-.search-result .left{
+.item-result .left{
 	width:50rpx;
 	height:974rpx;
 	position: relative;
@@ -37,38 +36,14 @@
 	padding-right:0;
 }
 /*单个印章列表*/
-.search-result .right{
-	width:486rpx;
-	height:974rpx;
-}
-/*单个印章*/
-.search-result .right .item{
-	width:156rpx;
-	height:489rpx;
-	background-color: #fff;
-	border:4rpx solid #BFB6AD;
-	margin-left:-4rpx;
-	margin-top:-4rpx;
-	padding:0;
-}
-.search-result .right .item image{
-	margin-top:50rpx;
-	width:156rpx;
-	/*height:156rpx;*/
-}
-/*简介描述*/
-.search-result .right .item .desc{
-	margin:0 auto;
-	padding-top:20rpx;
+.item-result .right{
 	text-align: center;
-	width:74rpx;
-	height:238rpx;
-	background-color: #fff;
-	color:#9E8768;
+	width:584rpx;
+	height:974rpx;
+	background-color: pink;
 }
-
 /*搜索框（选择名家、搜索按钮）*/
-.search-box{
+.item-box{
 	width:160rpx;
 	padding:0;
 	height:972rpx;
@@ -80,77 +55,33 @@
 	right:64rpx;
 	top:140rpx;
 	display:flex;
-
 }
-
-.search-area{
-	box-sizing: border-box;
-	padding:40rpx 0;
-	width:74rpx;
-	height:440rpx;
-	background-color: #fff;
-	position: absolute;
-	/*z-index: 999;*/
-	top:48rpx;
-	left:51rpx;
-	text-align: center;
-	/*光标隐藏*/
-	/*caret-color: transparent;*/
-}
-/*自定义光标*/
-/*.caret{
+/*释文、边款、详情按钮*/
+.desc-btn[type='default']{
+	height:420rpx;
 	width:60rpx;
-	height:4rpx;
-	background-color: #BAA99A;
+	background-color: transparent;
 	position: absolute;
-	top:66rpx;
-	left:56rpx;
-}*/
-
-/*选择名家*/
-.choose-author,.search-btn{
-	width:64rpx;
-	height:218rpx;
-	line-height:50rpx;
-	background-color: pink;
-	position: absolute;
-	top:488rpx;
-	left:56rpx;
-	outline:none;
-	padding:20rpx 10rpx 0;
-	font-size:36rpx;
+	bottom:0;
+	right:0;
 }
-.search-btn{
-	padding-top:100rpx;
-}
-/*名家列表*/
-.author-list{
+/*印章详情（释文、边款、详情）*/
+.stamp-desc{
 	height:432rpx;
 	width:0rpx;
-	background-color: #BAA99A;
+	background-color: transparent;
 	position: absolute;
 	left:0rpx;
-	bottom:52rpx;
+	bottom:-5rpx;
 }
-/*单个作家*/
-.author-item{
-	padding-top:50rpx;
+/*释文、边款、详情*/
+.explain,.side,.desc{
+	width:584rpx;
+	height:140rpx;
+	line-height:140rpx;
 	box-sizing: border-box;
-	border:1rpx solid #fff;
-	border-top:none;
-	width:60rpx;
-	height:216rpx;
-	line-height:50rpx;
-	text-align: center;
-	background-color: #BAA99A;
-	margin-right:-1rpx;
-	/*margin-bottom:-1rpx;*/
-	color:#fff;
-	font-size: 32rpx;
-	padding-left:10rpx;
+	padding-left:50rpx;
+	color:#CBB4A5;
 }
-/*查询按钮*/
-.search-btn{
-	top:703rpx;
-}
+
 

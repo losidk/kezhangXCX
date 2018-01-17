@@ -7,7 +7,7 @@
 		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 			<!-- 作者 -->
 			<navigator url="../author/author?id={{activeId}}" class="author">
-			{{searchResultList[0].logiciansName==searchResultList[1].logiciansName?searchResultList[0].logiciansName:searchResultList[searchResultList.length-1].logiciansName}}
+			{{searchResultList[0].logiciansName==searchResultList[1]==searchResultList[searchResultList.length-1].logiciansName?searchResultList[0].logiciansName:searchResultList[searchResultList.length-1].logiciansName}}
 			</navigator>
 			<!-- 翻页 -->
 			<button class="next" type="default" size="default"></button>
@@ -15,7 +15,7 @@
 		<!-- 印详细信息 -->
 		<scroll-view scroll-y class="right fr clearfix">
 			<!-- 单个印章 -->
-			<navigator url="../item/item" class="item fl" wx:for="{{searchResultList}}" wx:key="{{item.id}}">
+			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResultList}}" wx:key="{{item.id}}">
 				<image src="https://stamp.qingkequn.com/{{item.showImg}}" mode="widthFix"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
