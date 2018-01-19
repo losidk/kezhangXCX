@@ -1,5 +1,5 @@
 <!--item（印章详情页）-->
-<view style="background:url('../../images/item.jpg') no-repeat center center;background-size: 750rpx 1200rpx;" class="item-container">
+<view style="background:url('https://stamp.qingkequn.com/item.jpg') no-repeat center center;background-size: 750rpx 1200rpx;" class="item-container">
 	<!-- 详情结果页面 -->
 	<view class="item-result clearfix">
 		<!-- 名家、翻页 -->
@@ -15,10 +15,18 @@
 		</view>
 			<!-- 印详细信息 -->
 			<scroll-view scroll-y class="right fr clearfix">
-				<!-- 单个印章 -->
-				123
-				<!--  -->
-				<image></image>
+				<!-- 原印 -->
+				<view class="img-box" >
+					<image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix"></image>
+				</view>
+				<!-- 印稿 -->
+				<view class="img-box" >
+					<image src="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix"></image>
+				</view>
+				<!-- 边款 -->
+				<view class="side-box" >
+					<image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl.imgurl}}" mode="widthFix"></image>
+				</view>
 			</scroll-view>
 	</view>
   <!-- 释文、边款、详情 -->
@@ -28,11 +36,17 @@
 			<!-- 释文、边款、详情（展开页） -->
   		<scroll-view scroll-y animation="{{animationData}}" class="stamp-desc" >
   			<!-- 释文 -->
-				<view class="explain" style="background:url('../../images/desc.png') no-repeat center center;background-size: 584rpx 140rpx ">释文：</view>
+				<scroll-view scroll-y class="explain" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx ">
+					<view class="inner-box">释文：{{stampDesc.orgMapBean.chars}}</view>
+				</scroll-view>
 				<!-- 边款 -->
-				<view class="side" style="background:url('../../images/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">边款：</view>
+				<scroll-view scroll-y class="side" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
+					<view class="inner-box">边款：{{stampDesc.sideImg.chars}}</view>
+				</scroll-view>
 				<!-- 详情 -->
-				<view class="desc" style="background:url('../../images/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">详情：</view>
+				<scroll-view scroll-y class="desc" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
+					<view class="inner-box">详情：{{stampDesc.stampIntro}}</view>
+				</scroll-view>
   		</scroll-view>
   </view>
 </view>

@@ -40,7 +40,16 @@
 	text-align: center;
 	width:584rpx;
 	height:974rpx;
-	background-color: pink;
+	background-color: #fff;
+}
+/*印章图片（印稿、底面、边款）*/
+.img-box,.side-box{
+	margin:200rpx 0;
+	width:584rpx;
+	text-align: center;
+}
+.img-box image,.side-box image{
+	width:200rpx;
 }
 /*搜索框（选择名家、搜索按钮）*/
 .item-box{
@@ -83,5 +92,8 @@
 	padding-left:50rpx;
 	color:#CBB4A5;
 }
-
-
+.explain,.side,.desc .inner-box{
+	width:584rpx;
+	box-sizing: border-box;
+	/*padding-top:140rpx;*/
+}

@@ -6,7 +6,8 @@ Page({
   data: {
     stampId:-1,
     stampDesc:{},
-    animationData:''//释文、边款、详情列表动画
+    animationData:'',//释文、边款、详情列表动画
+
   },
   onLoad: function (e) {
     // console.log(e);

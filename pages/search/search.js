@@ -10,7 +10,8 @@ Page({
     searchResultList:[],//搜索印章列表结果
     animationData:'',//名家列表盒子动画
     chars:'',//用户搜索关键字
-    activeId:-1//当前选择的名家id
+    activeId:-1,//当前选择的名家id
+    searched:false//是否查询过
   },
   onLoad: function(){},
   onReady:function(){

@@ -3,8 +3,7 @@
     "pages/search/search",
     "pages/item/item",
     "pages/author-intro/author-intro",
-    "pages/guide/guide",
-    "pages/author/author"
+    "pages/guide/guide"
   ],
   "window":{
     "backgroundTextStyle":"light",
