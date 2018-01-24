@@ -37,18 +37,22 @@
 	padding-right:0;
 }
 /*单个印章列表*/
-.search-result .right{
+ .right{
 	width:486rpx;
 	height:974rpx;
 }
+ .right.searched{
+ 	background:url('https://stamp.qingkequn.com/search-bg2.png') no-repeat center center;
+ 	background-size:486rpx 974rpx ;
+ }
+ .search-result-swiper{
+	height:974rpx;
+ }
 /*单个印章*/
 .search-result .right .item{
 	width:156rpx;
-	height:489rpx;
-	background-color: #fff;
-	border:4rpx solid #BFB6AD;
-	margin-left:-4rpx;
-	margin-top:-4rpx;
+	height:490rpx;
+	/*background-color: pink;*/
 	padding:0;
 }
 .search-result .right .item image{
@@ -63,8 +67,13 @@
 	text-align: center;
 	width:74rpx;
 	height:238rpx;
-	background-color: #fff;
+	/*background-color: pink;*/
+	/*background-color: red;*/
 	color:#9E8768;
+	font-family:'FangSong_GB2312';
+}
+.search-result .right .item .desc text{
+
 }
 
 /*搜索框（选择名家、搜索按钮）*/
@@ -121,7 +130,7 @@
 	font-size:36rpx;
 }
 .search-btn{
-	padding-top:100rpx;
+	padding-top:50rpx;
 }
 /*名家列表*/
 .author-list{
@@ -133,6 +142,8 @@
 	left:0rpx;
 	/*left:-454rpx;*/
 	bottom:52rpx;
+	white-space: nowrap;
+	/*overflow:hidden;*/
 }
 /*覆盖weui样式*/
 .weui-cells_after-title,.radio-group{
@@ -152,7 +163,7 @@
 	line-height:50rpx;
 	text-align: center;
 	background-color: #BAA99A;
-	margin-right:-1rpx;
+	margin-right:2rpx;
 	font-size: 32rpx;
 	padding-left:10rpx;
 	position: relative;
@@ -160,22 +171,25 @@
 
 /*单个作家*/
 .author-item{
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	border-left:0.5rpx solid #fff;
 	width:60rpx;
-	height:216rpx;
-	line-height:50rpx;
-	text-align: center;
+	height:218rpx;
+	line-height:60rpx;
+	/*text-align: center;*/
 	background-color: #BAA99A;
-	margin-left:-1rpx;
+	margin-right:2rpx;
 	margin-top:-1rpx;
 	color:#fff;
 	font-size: 32rpx;
+	display:inline-block;
+	writing-mode:tb-rl;
+	letter-spacing:15rpx;
 }
 /*选中状态*/
 .author-item>.active{
 	box-sizing: border-box;
-	padding-top:20rpx;
+	padding-top:10rpx;
 	background-color: #fff;
 	color:#B4A292;
 	width:60rpx;
@@ -184,11 +198,11 @@
 /*未选中状态*/
 .author-item>.not-active{
 	box-sizing: border-box;
-	padding-top:20rpx;
+	padding-top:10rpx;
 	color:#fff;
 	background-color: #BAA99A;
 	width:60rpx;
-	height:214rpx;
+	height:216rpx;
 	border-bottom:.5rpx solid #fff;
 }
 /*选中状态按钮*/

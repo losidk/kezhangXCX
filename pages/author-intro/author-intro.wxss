@@ -72,13 +72,13 @@
 	box-sizing: border-box;
 	width:314rpx;
 	height:974rpx;
-	line-height: 58rpx;
+	line-height: 50rpx;
 	background-color: #fff;
 	writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
 	writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
 	text-decoration: underline;
 	font-size: 32rpx;
-	color:#B2A9A0;
+	color:#CABDAC;
 	overflow-x:scroll;
 }
 

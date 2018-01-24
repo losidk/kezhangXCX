@@ -5,13 +5,14 @@ const app = getApp()
 Page({
   data: {
     authorListStatus:true,//名家列表显示状态
-    size:20,//名家列表页页码
+    size:18,//名家列表页页码
     authorList:[],//名家列表
-    searchResultList:[],//搜索印章列表结果
+    searchResult:[],//搜索印章列表结果
     animationData:'',//名家列表盒子动画
     chars:'',//用户搜索关键字
     activeId:-1,//当前选择的名家id
-    searched:false//是否查询过
+    searched:false,//是否查询过
+    allNum:0//已搜索索引
   },
   onLoad: function(){},
   onReady:function(){
@@ -113,6 +114,10 @@ Page({
   },
   //搜索印章
   searchStampHandle:function(){
+    this.setData({
+
+    })
+
     var _this = this;
     //未选择名家
     if(this.data.activeId==-1){
@@ -124,47 +129,8 @@ Page({
           data:{
             // 'logiciansId':this.data.activeId,//名家id
             'chars':this.data.chars,//搜索印章关键字
-            'page':1,//开始页
             'size':10,//每页显示的数据个数
-            'stampId':''
-          },
-          dataType:'json',
-          success:function(res){
-
-            // 错误处理
-            if(res.statusCode!=200){
-              wx.showToast({
-                title: '获取名家列表失败',
-                icon: 'loading',
-                duration: 2000
-              })
-              return;
-            }
-            //未请求到数据
-            if(res.data.data.length==0){
-              wx.showToast({
-                title:'内容未找到',
-                icon:'loading',
-                duration:2000
-              });
-              return;
-            }
-            _this.setData({
-              'searchResultList':res.data.data
-            });
-          }
-        });
-        // 未选择名家、未输入关键字
-      }else{
-        wx.request({
-          url:app.globalData.baseUrl+'api/stamp/stampsQuery',
-          type:'post',
-          data:{
-            // 'logiciansId':this.data.activeId,//名家id
-            'chars':this.data.chars,//搜索印章关键字
-            'page':1,//开始页
-            'size':10,//每页显示的数据个数
-            'stampId':''
+            'allNum':0
           },
           dataType:'json',
           success:function(res){
@@ -176,8 +142,10 @@ Page({
                 icon: 'loading',
                 duration: 2000
               })
-              // return;
+              return;
             }
+
+
             //未请求到数据
             if(res.data.data.length==0){
               wx.showToast({
@@ -187,18 +155,24 @@ Page({
               });
               return;
             }
-
-            // console.log(res);
+            // 设置最新的allNum（用于翻页）
             _this.setData({
-              'searchResultList':res.data.data
+              'searchResult':res.data.data,
+              'allNum':res.data.allNum,
+              'activeId':res.data.data.stampList[0].logiciansId,
+              'searched':true
             });
           }
         });
+        // 未选择名家、未输入关键字
+      }else{
+       wx.showToast({
+         title: '请输入关键字',
+         icon: 'success',
+         duration: 2000
+       })
+       return;
 
-        // 跳转到名家详情页
-        // wx.redirectTo({
-        //   url:'../author-intro/author-intro?id='+this.data.activeId
-        // })
       }
       // 选择名家
     }else{
@@ -210,9 +184,8 @@ Page({
           data:{
             'logiciansId':this.data.activeId,//名家id
             'chars':this.data.chars,//搜索印章关键字
-            'page':1,//开始页
+            'allNum':this.data.allNum,//
             'size':10,//每页显示的数据个数
-            'stampId':''
           },
           dataType:'json',
           success:function(res){
@@ -237,7 +210,7 @@ Page({
             }
             // console.log(res);
             _this.setData({
-              'searchResultList':res.data.data
+              'searchResult':res.data.data
             });
           }
         });
@@ -252,4 +225,8 @@ Page({
     // 关闭名家列表
     this.closeAuthorListHandle();
   },
+  // 印章显示翻页
+  loadMoreStampHandle:function(){
+
+  }
 })

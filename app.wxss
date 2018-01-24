@@ -1,6 +1,20 @@
 /*引入weui*/
 /*@import 'weui.wxss';*/
 /**app.wxss**/
+@font-face {
+    font-family: 'FangSong_GB2312';
+    src: url('https://stamp.qingkequn.com/FangSong_GB2312.woff');
+    /*font-weight: normal;*/
+    font-style: normal;
+}
+view,text,input,textarea{
+
+	font-family:'FangSong_GB2312';
+	/*font-family:'FangSong';*/
+	/*font-family:'LiSong Pro Light ';*/
+	/*font-weight: 900;*/
+	color:#716253;
+}
 .container {
   height: 100%;
   display: flex;
@@ -8,6 +22,8 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  /*font-family:'FangSong';*/
+  font-family:'FangSong_GB2312';
 }
 .fl{
 	float: left;

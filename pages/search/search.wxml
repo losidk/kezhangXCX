@@ -1,31 +1,37 @@
 <!--search.wxml-->
 <view style="background:url('https://stamp.qingkequn.com/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 
+
 	<!-- 搜索结果页面 -->
 	<view class="search-result clearfix" style="background:url('https://stamp.qingkequn.com/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx">
 		<!-- 名家、翻页 -->
 		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 			<!-- 作者 -->
-			<navigator url="../author/author?id={{activeId}}" class="author" wx:if="{{searched}}">
-
+			<navigator url="../author-intro/author-intro?id={{activeId}}" class="author" wx:if="{{searched}}">
+				{{searchResult.logiciansName}}
 			</navigator>
-			<view class="author" wx:if="{{!searched}}">
+			<view class="author" wx:else="{{!searched}}">
 
 			</view>
-			<!-- 翻页 -->
-			<button class="next" type="default" size="default"></button>
+			<!-- 翻下页 -->
+			<button class="next" type="default" size="default" bindTap="loadMoreStampHandle"></button>
 		</view>
-		<!-- 印详细信息 -->
-		<scroll-view scroll-y class="right fr clearfix">
+
+		<!--查到的 印详细信息 -->
+		<scroll-view scroll-y class="right fr clearfix {{searched?'searched':''}}">
 			<!-- 单个印章 -->
-			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResultList}}" wx:key="{{item.id}}">
+			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
 				<image src="https://stamp.qingkequn.com/{{item.showImg}}" mode="widthFix"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
-					{{item.chars}}
+					<text>
+						{{item.chars}}
+					</text>
 				</view>
 			</navigator>
 		</scroll-view>
+
+
 	</view>
   <!-- 查询页 -->
   <view class="search-box fr" style="background:url('https://stamp.qingkequn.com/search-box.png') no-repeat center center;background-size: 160rpx 972rpx;">
@@ -34,16 +40,16 @@
 		<!-- 名家 -->
 		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle" >篆刻名家</button>
 
-		<scroll-view scroll-y animation="{{animationData}}" class="author-list" bindscrolltolower="loadMoreHandle" >
-			<view class="author-item fl" wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="isSelectedHandle" data-id="{{item.logiciansId}}">
+		<scroll-view scroll-x animation="{{animationData}}" class="author-list" bindscrolltolower="loadMoreHandle" >
+			<view class="author-item " wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="isSelectedHandle" data-id="{{item.logiciansId}}">
 				<view class="{{activeId==item.logiciansId?'active':'not-active'}}">
-					<view class="icon"></view>
-					{{item.name}}
+					<!-- <view class="icon"></view> -->
+
+				 	⊙{{item.name}}
 				</view>
 			</view>
-
 		</scroll-view>
 		<!-- 查询 -->
-		<button type="default" size="default" value="" class="search-btn" bindtap="searchStampHandle" >搜索</button>
+		<button type="default" size="default" value="" class="search-btn" bindtap="searchStampHandle" >⊙搜索</button>
   </view>
 </view>
