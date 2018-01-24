@@ -14,7 +14,7 @@
 
 			</view>
 			<!-- 翻下页 -->
-			<button class="next" type="default" size="default" bindTap="loadMoreStampHandle"></button>
+			<button class="next" type="default" size="default" bindtap="searchStampHandle" disabled="{{disabled}}"></button>
 		</view>
 
 		<!--查到的 印详细信息 -->
@@ -35,7 +35,7 @@
 	</view>
   <!-- 查询页 -->
   <view class="search-box fr" style="background:url('https://stamp.qingkequn.com/search-box.png') no-repeat center center;background-size: 160rpx 972rpx;">
-		<textarea name="" id="" class="search-area" placeholder="输入文字"  bindinput="inputChangeHandle"></textarea>
+		<textarea name="" id="" class="search-area" placeholder="输入文字"  bindinput="inputChangeHandle" value="{{searchValue}}"></textarea>
 		<!-- <view class="caret"></view> -->
 		<!-- 名家 -->
 		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle" >篆刻名家</button>

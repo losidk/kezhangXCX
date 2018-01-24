@@ -30,7 +30,7 @@
 }
 /*翻下页*/
 .next[type='default']{
-	width:44rpx;
+	width:50rpx;
 	height:160rpx;
 	background-color: transparent;
 	padding-left:0;
@@ -39,31 +39,31 @@
 /*单个印章列表*/
  .right{
 	width:486rpx;
-	height:974rpx;
+	height:980rpx;
 }
  .right.searched{
  	background:url('https://stamp.qingkequn.com/search-bg2.png') no-repeat center center;
- 	background-size:486rpx 974rpx ;
+ 	background-size:486rpx 980rpx ;
  }
  .search-result-swiper{
 	height:974rpx;
  }
 /*单个印章*/
 .search-result .right .item{
-	width:156rpx;
+	width:162rpx;
 	height:490rpx;
 	/*background-color: pink;*/
 	padding:0;
 }
 .search-result .right .item image{
 	margin-top:50rpx;
-	width:156rpx;
+	width:95%;
 	/*height:156rpx;*/
 }
 /*简介描述*/
 .search-result .right .item .desc{
 	margin:0 auto;
-	padding-top:20rpx;
+	/*padding-top:20rpx;*/
 	text-align: center;
 	width:74rpx;
 	height:238rpx;
@@ -134,23 +134,22 @@
 }
 /*名家列表*/
 .author-list{
-	height:432rpx;
+	height:216rpx;
 	width:0rpx;
 	/*width:500rpx;*/
 	background-color: #BAA99A;
 	position: absolute;
 	left:0rpx;
 	/*left:-454rpx;*/
-	bottom:52rpx;
+	bottom:268rpx;
 	white-space: nowrap;
-	/*overflow:hidden;*/
+
 }
 /*覆盖weui样式*/
 .weui-cells_after-title,.radio-group{
 	height:432rpx;
 	width:500rpx;
 }
-
 .radio{
 	display:block;
 	width:60rpx;
@@ -178,31 +177,34 @@
 	line-height:60rpx;
 	/*text-align: center;*/
 	background-color: #BAA99A;
-	margin-right:2rpx;
+	/*margin-right:2rpx;*/
 	margin-top:-1rpx;
 	color:#fff;
 	font-size: 32rpx;
+	letter-spacing:15rpx;
+
 	display:inline-block;
 	writing-mode:tb-rl;
-	letter-spacing:15rpx;
+
+
 }
 /*选中状态*/
 .author-item>.active{
 	box-sizing: border-box;
-	padding-top:10rpx;
+	padding-top:20rpx;
 	background-color: #fff;
 	color:#B4A292;
 	width:60rpx;
-	height:216rpx;
+	height:218rpx;
 }
 /*未选中状态*/
 .author-item>.not-active{
 	box-sizing: border-box;
-	padding-top:10rpx;
+	padding-top:20rpx;
 	color:#fff;
 	background-color: #BAA99A;
 	width:60rpx;
-	height:216rpx;
+	height:218rpx;
 	border-bottom:.5rpx solid #fff;
 }
 /*选中状态按钮*/
