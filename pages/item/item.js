@@ -7,7 +7,7 @@ Page({
     stampId:-1,
     stampDesc:{},
     animationData:'',//释文、边款、详情列表动画
-
+    activeId:0//名家id
   },
   onLoad: function (e) {
     // console.log(e);

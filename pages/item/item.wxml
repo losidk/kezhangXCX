@@ -7,7 +7,7 @@
 			<view class="left fl" >
 				<!-- 作者 -->
 				<view class="author">
-				{{searchResult.author}}
+				{{stampDesc.logiciansName}}
 				</view>
 				<!-- 翻页 -->
 				<button class="next" type="default" size="default"></button>

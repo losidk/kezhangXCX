@@ -4,15 +4,17 @@ const app = getApp()
 
 Page({
   data: {
-    logiciansId:-1,
+    firstId:0,
+    secondId:0,
+    logiciansId:0,
     authorInfo:{}
   },
   onLoad: function (e) {
     console.log(e);
     this.setData({
-      'logiciansId':e.logiciansId
+      'firstId':e.firstId-0,
+      'secondId':e.secondId-0
     });
-    console.log(this.data.logiciansId);
     this.loadAuthorInfo();
   },
   onReady:function(){
@@ -24,7 +26,7 @@ Page({
     wx.request({
       url:app.globalData.baseUrl+'api/stamp/logiciansDetailQry',
       data:{
-        'logiciansId':this.data.logiciansId
+        'logiciansId':this.data.firstId||this.data.secondId
       },
       type:'post',
       success:function(res){
@@ -34,5 +36,16 @@ Page({
         });
       }
     });
+  },
+  //加载全部作品：
+  loadAllWorks:function(){
+    let _this=this;
+    this.setData({
+      'logiciansId':_this.data.firstId||_this.data.secondId
+    });
+    console.log(this.data.logiciansId);
+    wx.navigateTo({
+      url:'../author-work/author-work?logiciansId='+this.data.logiciansId
+    })
   }
 })

@@ -9,7 +9,7 @@
 			{{authorInfo.name}}
 			</view>
 			<!-- 翻页 -->
-			<button class="next" type="default" size="default"></button>
+			<button class="next" type="default" size="default" bindtap="loadAllWorks"></button>
 		</view>
 		<!-- 个人简介 -->
 		<scroll-view scroll-y class="right fr clearfix">
@@ -17,7 +17,9 @@
 			<view class="inner-left fl">
 				<!-- 头像 -->
 				<view class="photo">
-					<image src="https://stamp.qingkequn.com/{{authorInfo.headimgurl}}" mode="widthFix"></image>
+					<view>
+						<image src="https://stamp.qingkequn.com/{{authorInfo.headimgurl}}" mode="widthFix"></image>
+					</view>
 				</view>
 				<!-- 代表作品 -->
 				<view class="product">

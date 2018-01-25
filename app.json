@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/search/search",
+    "pages/author-work/author-work",
     "pages/item/item",
     "pages/author-intro/author-intro",
     "pages/guide/guide"

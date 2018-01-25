@@ -1,0 +1,80 @@
+/*引导页css*/
+.search-container{
+	width:750rpx;
+	height:1200rpx;
+	position: relative;
+	overflow: hidden;
+}
+/*搜索结果页*/
+.search-result{
+	width:696rpx;
+	height:974rpx;
+	margin-top:138rpx;
+	background-color: transparent;
+}
+/*名家、翻页*/
+.search-result .left{
+	width:50rpx;
+	height:974rpx;
+	position: relative;
+}
+/*名家*/
+.author{
+	width:50rpx;
+	height:188rpx;
+	line-height:60rpx;
+	background-color: #D4CBB8;
+	margin-top:22rpx;
+	margin-bottom:580rpx;
+	color:#fff;
+	text-align: center;
+}
+/*翻下页*/
+.next[type='default']{
+	width:50rpx;
+	height:160rpx;
+	background-color: transparent;
+	padding-left:0;
+	padding-right:0;
+}
+/*单个印章列表*/
+ .right{
+	width:647rpx;
+	height:980rpx;
+	/*background-color: pink;*/
+}
+
+/*单个印章*/
+.search-result .right .item{
+	width:160rpx;
+	height:490rpx;
+	/*background-color: pink;*/
+	padding:0;
+	position: relative;
+}
+.search-result .right .item image{
+	margin-top:50rpx;
+	width:95%;
+	/*height:156rpx;*/
+}
+/*简介描述*/
+.search-result .right .item .desc{
+	position: absolute;
+	left:50%;
+	transform: translate(-50%,0);
+	bottom:50rpx;
+	margin:0 auto;
+	text-align: center;
+	width:74rpx;
+	color:#9E8768;
+	font-family:'FangSong_GB2312';
+
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.search-result .right .item .desc text{
+
+}

@@ -1,4 +1,4 @@
-/*引导页css*/
+/*search*/
 .search-container{
 	width:750rpx;
 	height:1200rpx;
@@ -21,9 +21,10 @@
 /*名家*/
 .author{
 	width:50rpx;
-	height:160rpx;
+	height:188rpx;
+	line-height:60rpx;
 	background-color: #D4CBB8;
-	margin-top:44rpx;
+	margin-top:22rpx;
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
@@ -52,30 +53,30 @@
 .search-result .right .item{
 	width:162rpx;
 	height:490rpx;
-	/*background-color: pink;*/
 	padding:0;
+	position: relative;
 }
 .search-result .right .item image{
 	margin-top:50rpx;
 	width:95%;
-	/*height:156rpx;*/
 }
 /*简介描述*/
 .search-result .right .item .desc{
+	position: absolute;
+	left:50%;
+	transform: translate(-50%,0);
+	bottom:50rpx;
 	margin:0 auto;
-	/*padding-top:20rpx;*/
 	text-align: center;
 	width:74rpx;
-	height:238rpx;
-	/*background-color: pink;*/
-	/*background-color: red;*/
 	color:#9E8768;
 	font-family:'FangSong_GB2312';
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
-.search-result .right .item .desc text{
-
-}
-
 /*搜索框（选择名家、搜索按钮）*/
 .search-box{
 	width:160rpx;
@@ -83,13 +84,10 @@
 	height:972rpx;
 	margin:0;
 	box-sizing: border-box;
-	/*margin-right:68rpx;*/
-	/*margin-top:140rpx;*/
 	position: absolute;
 	right:64rpx;
 	top:140rpx;
 	display:flex;
-
 }
 
 .search-area{
@@ -99,22 +97,10 @@
 	height:440rpx;
 	background-color: #fff;
 	position: absolute;
-	/*z-index: 999;*/
 	top:48rpx;
 	left:51rpx;
 	text-align: center;
-	/*光标隐藏*/
-	/*caret-color: transparent;*/
 }
-/*自定义光标*/
-/*.caret{
-	width:60rpx;
-	height:4rpx;
-	background-color: #BAA99A;
-	position: absolute;
-	top:66rpx;
-	left:56rpx;
-}*/
 
 /*选择名家*/
 .choose-author,.search-btn{
@@ -136,57 +122,26 @@
 .author-list{
 	height:216rpx;
 	width:0rpx;
-	/*width:500rpx;*/
 	background-color: #BAA99A;
 	position: absolute;
 	left:0rpx;
-	/*left:-454rpx;*/
 	bottom:268rpx;
 	white-space: nowrap;
-
-}
-/*覆盖weui样式*/
-.weui-cells_after-title,.radio-group{
-	height:432rpx;
-	width:500rpx;
-}
-.radio{
 	display:block;
-	width:60rpx;
-	height:216rpx;
-	float: left;
-	padding-top:50rpx;
-	box-sizing: border-box;
-	border:1rpx solid #fff;
-	border-top:none;
-	line-height:50rpx;
-	text-align: center;
-	background-color: #BAA99A;
-	margin-right:2rpx;
-	font-size: 32rpx;
-	padding-left:10rpx;
-	position: relative;
 }
-
 /*单个作家*/
 .author-item{
-	/*box-sizing: border-box;*/
 	border-left:0.5rpx solid #fff;
 	width:60rpx;
 	height:218rpx;
 	line-height:60rpx;
-	/*text-align: center;*/
 	background-color: #BAA99A;
-	/*margin-right:2rpx;*/
 	margin-top:-1rpx;
 	color:#fff;
 	font-size: 32rpx;
 	letter-spacing:15rpx;
-
 	display:inline-block;
 	writing-mode:tb-rl;
-
-
 }
 /*选中状态*/
 .author-item>.active{
@@ -207,28 +162,7 @@
 	height:218rpx;
 	border-bottom:.5rpx solid #fff;
 }
-/*选中状态按钮*/
-.author-item>.active .icon{
-	width:36rpx;
-	height:36rpx;
-	border-radius: 50%;
-	background-color: #fff;
-	margin:0 auto;
-	border:.5rpx solid #BAA99A;
-	box-sizing: border-box;
-}
-/*未选中状态按钮*/
-.author-item>.not-active .icon{
-	width:36rpx;
-	height:36rpx;
-	border-radius: 50%;
-	background-color: #BAA99A;
-	margin:0 auto;
-	border:.5rpx solid #fff;
-	box-sizing: border-box;
-}
 /*查询按钮*/
 .search-btn{
 	top:703rpx;
 }
-

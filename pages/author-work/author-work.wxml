@@ -1,0 +1,32 @@
+<!--author-work.wxml-->
+<view style="background:url('../../images/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
+
+
+	<!-- 搜索结果页面 -->
+	<view class="search-result clearfix">
+		<!-- 名家、翻页 -->
+		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+			<!-- 作者 -->
+			<navigator url="../author-intro/author-intro?firstId={{activeId}}&secondId={{activeId}}" class="author" >
+				{{searchResult.logiciansName}}
+			</navigator>
+
+			<!-- 翻下页 -->
+			<button class="next" type="default" size="default" bindtap="searchStampHandle"></button>
+		</view>
+
+		<!--查到的 印详细信息 -->
+		<scroll-view scroll-y class="right fr clearfix">
+			<!-- 单个印章 -->
+			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
+				<image src="https://stamp.qingkequn.com/{{item.showImg}}" mode="widthFix"></image>
+				<!-- 简洁描述 -->
+				<view class="desc">
+					<!-- <text> -->
+						{{item.chars}}
+					<!-- </text> -->
+				</view>
+			</navigator>
+		</scroll-view>
+	</view>
+</view>
