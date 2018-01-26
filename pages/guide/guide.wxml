@@ -3,7 +3,7 @@
   <!-- 引导页 -->
   <view class="guide" >
   	<navigator url="../search/search">
-  		<image src="../../images/guide.png" mode="scaleToFill"></image>
+  		<image src="https://stamp.qingkequn.com/guide.png" mode="scaleToFill"></image>
   	</navigator>
   </view>
 </view>

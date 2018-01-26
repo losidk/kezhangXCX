@@ -28,6 +28,8 @@
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
+	font-family: 'FangSong_GB2312';
+	font-weight: 700;
 }
 /*翻下页*/
 .next[type='default']{
@@ -46,16 +48,17 @@
 .author-intro .right .inner-left{
 	width:314rpx;
 	height:974rpx;
+	background: url('https://stamp.qingkequn.com/author-info-bg.png') center center no-repeat;
+	background-size:314rpx 974rpx ;
 }
 .author-intro .right .inner-left .photo,
 .author-intro .right .inner-left .product
 {
 	width:314rpx;
 	height:487rpx;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	overflow: hidden;
-	border-top:4rpx solid #D7D1CB;
-	margin-top:-4rpx;
+	/*margin-top:-4rpx;*/
 }
 
 /*头像*/

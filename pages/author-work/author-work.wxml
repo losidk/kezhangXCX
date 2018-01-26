@@ -1,5 +1,5 @@
 <!--author-work.wxml-->
-<view style="background:url('../../images/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
+<view style="background:url('https://stamp.qingkequn.com/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 
 
 	<!-- 搜索结果页面 -->

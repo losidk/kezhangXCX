@@ -27,21 +27,25 @@
 	color:#fff;
 	text-align: center;
 	margin-left:5px;
+	font-family: 'FangSong_GB2312';
+	font-weight: 700;
 }
 /*翻下页*/
 .next{
-	width:50rpx;
-	height:160rpx;
-	background-color: #D4CBB7;
+	width:49rpx;
+	height:170rpx;
+	background:url('https://stamp.qingkequn.com/sidebar-bg.png')no-repeat center center;
+	background-size:49rpx 170rpx ;
 	padding-left:0;
 	padding-right:0;
+	margin-left:2rpx;
 }
 /*单个印章列表*/
 .item-result .right{
 	text-align: center;
 	width:584rpx;
-	height:974rpx;
-	background-color: #fff;
+	height:966rpx;
+	margin-top:8rpx;
 }
 /*印章图片（印稿、底面、边款）*/
 .img-box,.side-box{

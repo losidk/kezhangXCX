@@ -28,6 +28,9 @@
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
+	font-family: 'FangSong_GB2312';
+	font-weight: 700;
+	padding:0;
 }
 /*翻下页*/
 .next[type='default']{

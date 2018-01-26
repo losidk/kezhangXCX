@@ -1,5 +1,5 @@
 <!--名家介绍.wxml-->
-<view style="background:url('../../images/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
+<view style="background:url('https://stamp.qingkequn.com/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
 	<!-- 名家介绍 -->
 	<view class="author-intro clearfix">
 		<!-- 名家、翻页 -->
