@@ -77,7 +77,6 @@
 .author-intro .right .inner-left .photo image{
 	width:100%;
 	height:100%;
-	background-color: pink;
 }
 
 /*简介*/
@@ -90,7 +89,6 @@
 	background-color: #fff;
 	writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
 	writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
-	text-decoration: underline;
 	font-size: 32rpx;
 	color:#CABDAC;
 	overflow-x:scroll;

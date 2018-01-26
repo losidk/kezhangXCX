@@ -25,12 +25,13 @@ Page({
   },
   //点击显示(隐藏)释文、边款、详情列表
   chooseAuthorHandle:function(){
-    if(this.data.authorListStatus){
+    console.log('123');
+    if(!this.data.authorListStatus){
     // 打开释文、边款、详情列表
-      this.openAuthorListHandle();
+      this.closeAuthorListHandle();
     }else{
       // 关闭释文、边款、详情列表
-      this.closeAuthorListHandle();
+      this.openAuthorListHandle();
     }
   },
   //打开释文、边款、详情列表

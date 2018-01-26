@@ -10,7 +10,6 @@
 	width:536rpx;
 	height:974rpx;
 	margin-top:138rpx;
-	background-color: #fff;
 }
 /*名家、翻页*/
 .search-result .left{
@@ -20,14 +19,15 @@
 }
 /*名家*/
 .author{
-	width:50rpx;
-	height:188rpx;
+	width:42rpx;
+	height:178rpx;
 	line-height:60rpx;
 	background-color: #D4CBB8;
-	margin-top:22rpx;
+	margin-top:32rpx;
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
+	margin-left:4rpx;
 }
 /*翻下页*/
 .next[type='default']{
@@ -85,7 +85,7 @@
 	margin:0;
 	box-sizing: border-box;
 	position: absolute;
-	right:64rpx;
+	right:68rpx;
 	top:140rpx;
 	display:flex;
 }
@@ -107,41 +107,56 @@
 	width:64rpx;
 	height:218rpx;
 	line-height:50rpx;
-	background-color: pink;
 	position: absolute;
 	top:488rpx;
 	left:56rpx;
 	outline:none;
 	padding:20rpx 10rpx 0;
 	font-size:36rpx;
+	overflow: hidden;
 }
 .search-btn{
 	padding-top:50rpx;
 }
 /*名家列表*/
 .author-list{
-	height:216rpx;
+	height:432rpx;
 	width:0rpx;
 	background-color: #BAA99A;
 	position: absolute;
 	left:0rpx;
-	bottom:268rpx;
-	white-space: nowrap;
-	display:block;
+	overflow: hidden;
+	/*bottom:268rpx;*/
+	/*white-space: nowrap;*/
+
+	bottom:52rpx;
+	display: -webkit-flex; /* Safari */
+	display:flex;
+	flex-direction: row-reverse;
+	flex-wrap:wrap-reverse ;
 }
 /*单个作家*/
 .author-item{
 	border-left:0.5rpx solid #fff;
 	width:60rpx;
 	height:218rpx;
-	line-height:60rpx;
-	background-color: #BAA99A;
-	margin-top:-1rpx;
+	/*line-height:60rpx;*/
+	/*background-color: #BAA99A;*/
+	background-color: pink;
+	/*margin-top:-1rpx;*/
+	margin-top:0rpx;
+	text-align: center;
 	color:#fff;
 	font-size: 32rpx;
 	letter-spacing:15rpx;
-	display:inline-block;
-	writing-mode:tb-rl;
+
+	/*display:inline-block;*/
+	/*writing-mode:tb-rl;*/
+
+	float: right;
+	flex:1;
+	line-height:42rpx;
+/*padding-left:10rpx;*/
 }
 /*选中状态*/
 .author-item>.active{
@@ -151,6 +166,8 @@
 	color:#B4A292;
 	width:60rpx;
 	height:218rpx;
+	text-align: center;
+	padding-left:12rpx;
 }
 /*未选中状态*/
 .author-item>.not-active{
@@ -161,6 +178,9 @@
 	width:60rpx;
 	height:218rpx;
 	border-bottom:.5rpx solid #fff;
+
+	text-align: center;
+	padding-left:12rpx;
 }
 /*查询按钮*/
 .search-btn{

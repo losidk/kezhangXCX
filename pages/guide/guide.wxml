@@ -1,9 +1,9 @@
 <!--guide.wxml-->
-<view class="container">
+<view class="guide-container">
   <!-- 引导页 -->
   <view class="guide" >
   	<navigator url="../search/search">
-  		<image src="../../images/guide.png"></image>
+  		<image src="../../images/guide.png" mode="scaleToFill"></image>
   	</navigator>
   </view>
 </view>

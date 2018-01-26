@@ -5,7 +5,8 @@
 	<!-- 搜索结果页面 -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
-		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+
+		<view class="left fl">
 			<!-- 作者 -->
 			<navigator url="../author-intro/author-intro?firstId={{activeId}}&secondId={{activeId}}" class="author" >
 				{{searchResult.logiciansName}}

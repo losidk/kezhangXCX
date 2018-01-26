@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/search/search",
+    "pages/guide/guide",
     "pages/author-work/author-work",
     "pages/item/item",
-    "pages/author-intro/author-intro",
-    "pages/guide/guide"
+    "pages/author-intro/author-intro"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor":"# F7F0E4"
+    "navigationBarBackgroundColor":"#F7F0E4",
+    "navigationBarTextStyle": "black"
   }
 }

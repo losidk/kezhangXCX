@@ -1,16 +1,20 @@
 /*引导页css*/
+.guide-container{
+	width:750rpx;
+	height:1210rpx;
+	overflow: hidden;
+}
 
 .guide{
-	flex:1;
 	width:750rpx;
 	padding:0;
-	height:1200rpx;
+	height:1210rpx;
 	margin:0;
 	box-sizing: border-box;
 	overflow: hidden;
 }
 .guide image{
-	flex:1;
 	width:750rpx;
-	height:1200rpx;
+	height:1210rpx;
+	overflow: hidden;
 }

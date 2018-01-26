@@ -1,5 +1,5 @@
 <!--名家介绍.wxml-->
-<view style="background:url('https://stamp.qingkequn.com/search.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
+<view style="background:url('../../images/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
 	<!-- 名家介绍 -->
 	<view class="author-intro clearfix">
 		<!-- 名家、翻页 -->
@@ -18,7 +18,7 @@
 				<!-- 头像 -->
 				<view class="photo">
 					<view>
-						<image src="https://stamp.qingkequn.com/{{authorInfo.headimgurl}}" mode="widthFix"></image>
+						<image src="https://stamp.qingkequn.com/{{authorInfo.headimgurl}}" mode="aspectFill"></image>
 					</view>
 				</view>
 				<!-- 代表作品 -->

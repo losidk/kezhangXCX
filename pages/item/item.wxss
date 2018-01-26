@@ -19,19 +19,20 @@
 }
 /*名家*/
 .author{
-	width:50rpx;
+	width:42rpx;
 	height:160rpx;
 	background-color: #D4CBB8;
 	margin-top:44rpx;
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
+	margin-left:5px;
 }
 /*翻下页*/
-.next[type='default']{
-	width:44rpx;
+.next{
+	width:50rpx;
 	height:160rpx;
-	background-color: transparent;
+	background-color: #D4CBB7;
 	padding-left:0;
 	padding-right:0;
 }
@@ -95,5 +96,10 @@
 .explain,.side,.desc .inner-box{
 	width:584rpx;
 	box-sizing: border-box;
+	font-weight: 400;
 	/*padding-top:140rpx;*/
+}
+.explain,.side,.desc .inner-box>.strong{
+	font-family: 'FangSong_GB2312';
+	font-weight: 700;
 }

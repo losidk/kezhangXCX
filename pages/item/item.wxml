@@ -2,15 +2,14 @@
 <view style="background:url('https://stamp.qingkequn.com/item.jpg') no-repeat center center;background-size: 750rpx 1200rpx;" class="item-container">
 	<!-- 详情结果页面 -->
 	<view class="item-result clearfix">
-		<!-- 名家、翻页 -->
-		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+		<view class="left fl">
 			<view class="left fl" >
 				<!-- 作者 -->
 				<view class="author">
 				{{stampDesc.logiciansName}}
 				</view>
 				<!-- 翻页 -->
-				<button class="next" type="default" size="default"></button>
+				<view class="next" size="default" ></view>
 			</view>
 		</view>
 			<!-- 印详细信息 -->
@@ -37,15 +36,21 @@
   		<scroll-view scroll-y animation="{{animationData}}" class="stamp-desc" >
   			<!-- 释文 -->
 				<scroll-view scroll-y class="explain" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx ">
-					<view class="inner-box">释文：{{stampDesc.orgMapBean.chars}}</view>
+					<view class="inner-box"><text class="strong">释文：</text><text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.orgMapBean.chars}}</text></view>
 				</scroll-view>
 				<!-- 边款 -->
 				<scroll-view scroll-y class="side" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
-					<view class="inner-box">边款：{{stampDesc.sideImg.chars}}</view>
+					<view class="inner-box">
+						<text class="strong">边款：</text>
+					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.sideImg.chars}}</text>
+				</view>
 				</scroll-view>
 				<!-- 详情 -->
 				<scroll-view scroll-y class="desc" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
-					<view class="inner-box">详情：{{stampDesc.stampIntro}}</view>
+					<view class="inner-box">
+					<text class="strong">详情：</text>
+					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.stampIntro}}</text>
+			</view>
 				</scroll-view>
   		</scroll-view>
   </view>
