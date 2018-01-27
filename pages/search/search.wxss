@@ -24,7 +24,7 @@
 	line-height:60rpx;
 	background-color: #D4CBB8;
 	margin-top:32rpx;
-	margin-bottom:580rpx;
+	margin-bottom:336rpx;
 	color:#fff;
 	text-align: center;
 	margin-left:4rpx;
@@ -40,14 +40,26 @@
 	width:100%;
 	height:100%;
 }
+
+
 /*翻下页*/
-.next[type='default']{
+.next[type='default'],.prev[type='default']{
 	width:50rpx;
 	height:160rpx;
 	background-color: transparent;
 	padding-left:0;
 	padding-right:0;
 }
+/*翻上页*/
+.prev[type='default']{
+	width:50rpx;
+	height:160rpx;
+	background-color: transparent;
+	padding-left:0;
+	padding-right:0;
+	margin-bottom:78rpx;
+}
+
 /*单个印章列表*/
  .right{
 	width:486rpx;
@@ -87,6 +99,8 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+  /*background-color: pink;*/
+  height:172rpx;
 }
 /*搜索框（选择名家、搜索按钮）*/
 .search-box{

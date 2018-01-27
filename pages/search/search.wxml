@@ -4,6 +4,7 @@
 	<!-- <view class="search-result clearfix" style="background:url('https://stamp.qingkequn.com/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx"> -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
+		<!-- <view class="left fl" style="background:url('../../images/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx"> -->
 		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 		<!-- <view class="left fl"> -->
 			<!-- 作者 -->
@@ -13,6 +14,13 @@
 			<view class="author" wx:else="{{!searched}}">
 
 			</view>
+
+			<!-- 未选择名家 翻上页 disabled = true -->
+			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button>
+
+			<!-- 输入名家 翻下页 disabled = false -->
+			<button class="prev" type="default" size="default" bindtap="selectedAuthorPrevMoreHandle" disabled="{{disabled}}"
+			wx:else="{{!disabled}}"></button>
 
 			<!-- 未选择名家 翻下页 disabled = true -->
 			<button class="next" type="default" size="default" bindtap="nextSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button>

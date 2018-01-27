@@ -14,18 +14,19 @@
 		</view>
 			<!-- 印详细信息 -->
 			<scroll-view scroll-y class="right fr clearfix">
-				<!-- 原印 -->
-				<view class="img-box" >
-					<image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix"></image>
-				</view>
+
 				<!-- 印稿 -->
 				<view class="img-box" >
-					<image src="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix"></image>
+					<image src="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 				<!-- 边款 -->
 				<view class="side-box" >
-					<image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl.imgurl}}" mode="widthFix"></image>
+					<image src="https://stamp.qingkequn.com/{{stampDesc.sideImg[0].imgurl}}" mode="widthFix"></image>
 				</view>
+				<!-- 原印 -->
+				<!-- <view class="img-box" > -->
+					<!-- <image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix"></image> -->
+				<!-- </view> -->
 			</scroll-view>
 	</view>
   <!-- 释文、边款、详情 -->

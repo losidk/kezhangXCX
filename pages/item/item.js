@@ -67,5 +67,12 @@ Page({
         console.log(_this.data.stampDesc);
       }
     });
+  },
+  //预览图片：
+  previewImgHandle:function(){
+    wx.previewImage({
+      current: 'https://stamp.qingkequn.com/stemp.png', // 当前显示图片的http链接
+      urls: ['https://stamp.qingkequn.com/stemp.png','https://stamp.qingkequn.com/stemp.png'] // 需要预览的图片http链接列表
+    })
   }
 })
