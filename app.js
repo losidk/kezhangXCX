@@ -35,5 +35,14 @@ App({
   },
   globalData: {
     baseUrl:'https://stamp.qingkequn.com/'
+  },
+  toast:function(str){
+    wx.showToast({
+      title:str,
+      icon:'success',
+      image:'../../images/wu.png',
+      duration:2000
+    });
+    return;
   }
 })

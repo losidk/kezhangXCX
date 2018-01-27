@@ -17,12 +17,12 @@ Page({
     searchValue:null,//所搜框内容
     disabled:true,
     choosed:false,//是否选择名家
-    currentAllNum:0,//当前allNum
-    currentStampListLength:0,//当前搜索页面数据量
-    prevStampListLength:0,//上一次搜索页面数据量
-    prevAllNum:0,//上一次搜索allNum
+    // currentAllNum:0,//当前allNum
+    // currentStampListLength:0,//当前搜索页面数据量
+    // prevStampListLength:0,//上一次搜索页面数据量
+    // prevAllNum:0,//上一次搜索allNum
 
-    allNumList:[],//allNum
+    allNumList:[0],//allNum
   },
   onLoad: function(){},
   onReady:function(){
@@ -73,22 +73,10 @@ Page({
       success:(res)=>{
         // 错误处理
         if(res.statusCode!=200){
-          wx.showToast({
-            title: '获取名家列表失败',
-            icon: 'success',
-            image:'../../images/wu.png',
-            duration: 2000
-          });
-          return;
+          app.toast('获取名家列表失败');
         };
         if(res.data.data.length!==this.data.size){
-         wx.showToast({
-          title:"没有更多数据了",
-          icon:"success",
-          image:'../../images/wu.png',
-          duration:2000
-         });
-          return;
+          app.toast('没有更多数据了');
         }
         this.setData({
           "authorList":res.data.data
@@ -132,17 +120,10 @@ Page({
   },
   // 未选择名家翻上页 查询
   prevSearchStampHandle:function(){
-    //prevAllNum(当前allNum-上次请求的数据量)
 
-    // console.log('currentAllNum:'+this.data.currentAllNum);
-    console.log('prevStampListLength:'+this.data.prevStampListLength);
-
-    this.setData({
-      'prevAllNum':(this.data.currentAllNum-0)-(this.data.prevStampListLength-0)
-    });
-    console.log('--------------------------------------');
-    console.log('prevAllNum：'+this.data.prevAllNum);
-    this.globalSearchHandle(this.data.prevAllNum);
+    var innerAllNumList = this.data.allNumList.pop();
+    console.log(innerAllNumList);
+    this.globalSearchHandle(innerAllNumList[innerAllNumList.length-1]);
   },
   // 查询印章
   searchStampHandle:function(){
@@ -167,32 +148,19 @@ Page({
           console.log(res);
           // 错误处理
           if(res.statusCode!=200){
-            wx.showToast({
-              title: '获取名家列表失败',
-              icon: 'success',
-              image:'../../images/wu.png',
-              duration: 2000
-            })
-            return;
+            app.toast('获取名家列表失败');
           }
           //未请求到数据
           if(res.data.data.stampList.length==0){
-            wx.showToast({
-              title:'无更多内容',
-              icon:'success',
-              image:'../../images/wu.png',
-              duration:2000
-            });
-            return;
+            app.toast('无更多内容');
+
           }
           // 设置最新的allNum（用于翻页）
           _this.setData({
             'searchResult':res.data.data,
             'allNum':res.data.data.allNum,
-            'currentAllNum':(res.data.data.allNum-0)-(res.data.data.stampList.length),
             'secondId':res.data.data.logiciansId,
             'searched':true,
-            'currentStampListLength':res.data.data.stampList.length
           });
         }
       });
@@ -204,12 +172,9 @@ Page({
       this.setData({
         'disabled':true
       });
-      wx.showToast({
-        title: '请输入关键字',
-        icon: 'success',
-        image:'../../images/wu.png',
-        duration: 2000
-      })
+
+      app.toast('请输入关键字');
+
       // 关闭名家列表
       this.closeAuthorListHandle();
       return;
@@ -232,24 +197,11 @@ Page({
         success:function(res){
           // 错误处理
           if(res.statusCode!=200){
-            wx.showToast({
-              title: '获取名家列表失败',
-              icon: 'success',
-              image:'../../images/wu.png',
-              duration: 2000
-            })
-            return;
+            app.toast('获取名家列表失败');
           }
           //未请求到数据
           if(res.data.data.stampList.length==0){
-
-            wx.showToast({
-              title:'无更多内容',
-              icon:'success',
-              image:'../../images/wu.png',
-              duration:2000
-            });
-            return;
+            app.toast('无更多内容');
           }
           _this.setData({
             'searchResult':res.data.data,
@@ -278,11 +230,8 @@ Page({
   globalSearchHandle:function(allNum){
     var allNum1 = (allNum-0)||0;
     var _this = this;
+    var innerAllNumList = this.data.allNumList;
 
-    console.log(this.data.searchResult);
-    this.setData({
-      'prevStampListLength':this.data.currentStampListLength||0
-    });
     // 未选择名家、已输入搜索关键字
     if(this.data.activeId==0&&this.data.chars.trim()!==''){
       // console.log('未选择名家、已输入搜索关键字');
@@ -303,41 +252,28 @@ Page({
           console.log(res);
           // 错误处理
           if(res.statusCode!=200){
-            wx.showToast({
-              title: '获取名家列表失败',
-              icon: 'success',
-              image:'../../images/wu.png',
-              duration: 2000
-            })
-            return;
+           app.toast('获取名家列表失败');
           }
           //未请求到数据
           if(res.data.data.stampList.length==0){
-            wx.showToast({
-              title:'无更多内容',
-              icon:'success',
-              image:'../../images/wu.png',
-              duration:2000
-            });
-            return;
+            app.toast('无更多内容');
           }
+
+          innerAllNumList.push(res.data.data.allNum);
+          console.log(innerAllNumList);
+
           // 设置最新的allNum（用于翻页）
           _this.setData({
             'searchResult':res.data.data,
             'allNum':res.data.data.allNum,
             'secondId':res.data.data.logiciansId,
             'searched':true,
-            'currentStampListLength':res.data.data.stampList.length,
-            'currentAllNum':(res.data.data.allNum-0)-(res.data.data.stampList.length-0)
           });
 
         }
       });
       // 关闭名家列表
       this.closeAuthorListHandle();
-      // console.log('===============================');
-      // console.log('allNum:'+this.data.allNum);
-      // console.log('currnetAllNum:'+this.data.currentAllNum);
     }
 
     // 未选择名家、未输入关键字
@@ -345,12 +281,7 @@ Page({
       this.setData({
         'disabled':true
       });
-      wx.showToast({
-        title: '请输入关键字',
-        icon: 'success',
-        image:'../../images/wu.png',
-        duration: 2000
-      })
+      app.toast('请输入关键字');
       // 关闭名家列表
       this.closeAuthorListHandle();
       return;
@@ -374,24 +305,12 @@ Page({
         success:function(res){
           // 错误处理
           if(res.statusCode!=200){
-            wx.showToast({
-              title: '获取名家列表失败',
-              icon: 'success',
-              image:'../../images/wu.png',
-              duration: 2000
-            })
-            return;
+           app.toast('获取名家列表失败');
           }
           //未请求到数据
           if(res.data.data.stampList.length==0){
 
-            wx.showToast({
-              title:'无更多内容',
-              icon:'success',
-              image:'../../images/wu.png',
-              duration:2000
-            });
-            return;
+            app.toast('无更多内容');
           }
           _this.setData({
             'searchResult':res.data.data,
@@ -432,24 +351,13 @@ Page({
      success:function(res){
        // 错误处理
        if(res.statusCode!=200){
-         wx.showToast({
-           title: '获取名家列表失败',
-           icon: 'success',
-           image:'../../images/wu.png',
-           duration: 2000
-         })
-         return;
+        app.toast('获取名家列表失败');
+
        }
        //未请求到数据
        if(res.data.data.stampList.length==0){
 
-         wx.showToast({
-           title:'无更多内容',
-           icon:'success',
-           image:'../../images/wu.png',
-           duration:2000
-         });
-         return;
+         app.toast('无更多内容');
        }
        _this.setData({
          'searchResult':res.data.data,
