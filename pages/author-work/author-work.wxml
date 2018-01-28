@@ -14,7 +14,7 @@
 			</navigator>
 
 			<!-- 翻上页 -->
-			<button class="prev" type="default" size="default" bindtap="searchStampHandle"></button>
+			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle"></button>
 
 			<!-- 翻下页 -->
 			<button class="next" type="default" size="default" bindtap="searchStampHandle"></button>

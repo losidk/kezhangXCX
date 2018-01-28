@@ -8,8 +8,7 @@ Page({
     stampDesc:{},
     animationData:'',//释文、边款、详情列表动画
     activeId:0,//名家id
-    imgList:[],
-    scrollTop:0//详情scrollTop值
+    imgList:[]
   },
   onLoad: function (e) {
     // console.log(e);
@@ -50,7 +49,6 @@ Page({
     this.setData({
       'authorListStatus':false,
       'animationData':this.animationData.export(),
-      'scrollTop':0
       // 'activeId':-1
     });
   },
@@ -63,6 +61,9 @@ Page({
         stampId:this.data.stampId
       },
       success:function(res){
+        console.log(res);
+        console.log(res.data.data.sideImg[0]);
+
         var orgUrl =  'https://stamp.qingkequn.com/wu-small.png';
         var sealUrl = 'https://stamp.qingkequn.com/wu-small.png';
         var sideUrl = 'https://stamp.qingkequn.com/wu-small.png';
