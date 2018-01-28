@@ -11,7 +11,6 @@ Page({
     prevAllNumList:[]// 向上翻页标记
   },
   onLoad: function(e){
-    // console.log(e);
     this.setData({
       'activeId':e.logiciansId-0
     });
@@ -35,7 +34,6 @@ Page({
          },
          dataType:'json',
          success:function(res){
-           console.log(res);
            // 错误处理
            if(res.statusCode!=200){
              app.toast('获取名家列表失败');
@@ -58,14 +56,11 @@ Page({
            });
          }
        });
-       console.log(this.data.allNumList);
   },
   //上一页 搜索
   prevSearchStampHandle:function(){
-    console.log('123');
     let _this = this;
     let innerAllNumList = this.data.allNumList;
-    console.log('allNUm:'+innerAllNumList[innerAllNumList.length-1]);
      if(this.data.prevAllNumList.length==this.data.allNumList.length){
       app.toast('没有更多数据');
       return;
@@ -82,7 +77,6 @@ Page({
     }
 
     // innerAllNumList.pop();
-    console.log('allNUm:'+innerAllNumList[innerAllNumList.length-1]);
      wx.request({
        url:app.globalData.baseUrl+'api/stamp/stampsQuery',
        type:'post',
@@ -93,7 +87,6 @@ Page({
        },
        dataType:'json',
        success:function(res){
-         console.log(res);
          // 错误处理
          if(res.statusCode!=200){
            app.toast('获取名家列表失败');
@@ -116,7 +109,6 @@ Page({
          });
        }
      });
-     console.log(this.data.allNumList);
   },
   // 搜索印章方法封装：
   globalSearchHandle:function(allNum){
@@ -133,7 +125,6 @@ Page({
         },
         dataType:'json',
         success:function(res){
-          console.log(res);
           // 错误处理
           if(res.statusCode!=200){
             app.toast('获取名家列表失败');
