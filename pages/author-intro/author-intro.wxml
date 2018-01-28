@@ -1,9 +1,11 @@
 <!--名家介绍.wxml-->
-<view style="background:url('https://stamp.qingkequn.com/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="intro-container">
+<view class="intro-container" style="background:url('https://stamp.qingkequn.com/author-intro-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;">
+
 	<!-- 名家介绍 -->
 	<view class="author-intro clearfix">
 		<!-- 名家、翻页 -->
-		<view class="left fl" style="background:url('https://stamp.qingkequn.com/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+
+		<view class="left fl">
 			<!-- 作者 -->
 			<view class="author">
 			{{authorInfo.name}}
@@ -12,7 +14,7 @@
 			<button class="next" type="default" size="default" bindtap="loadAllWorks"></button>
 		</view>
 		<!-- 个人简介 -->
-		<scroll-view scroll-y class="right fr clearfix">
+		<view scroll-y class="right fr clearfix">
 			<!-- 头像、代表作品 -->
 			<view class="inner-left fl">
 				<!-- 头像 -->
@@ -29,6 +31,6 @@
 			<!-- 简介 -->
 			<view scroll-x class="inner-right fl">{{authorInfo.intro}}
 			</view>
-		</scroll-view>
+		</view>
 	</view>
 </view>

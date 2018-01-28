@@ -10,20 +10,21 @@
 	width:696rpx;
 	height:974rpx;
 	margin-top:138rpx;
-	background-color: #fff;
+	/*background-color: #fff;*/
 }
 /*名家、翻页*/
 .author-intro .left{
-	width:50rpx;
-	height:974rpx;
+	width:46rpx;
+	height:968rpx;
 	position: relative;
+	top:6rpx;
 }
 /*名家*/
 .author{
-	width:50rpx;
+	width:46rpx;
 	height:160rpx;
 	line-height:60rpx;
-	background-color: #D4CBB8;
+	/*background-color: #D4CBB8;*/
 	margin-top:32rpx;
 	margin-bottom:580rpx;
 	color:#fff;
@@ -48,8 +49,8 @@
 .author-intro .right .inner-left{
 	width:314rpx;
 	height:974rpx;
-	background: url('https://stamp.qingkequn.com/author-info-bg.png') center center no-repeat;
-	background-size:314rpx 974rpx ;
+	/*background: url('https://stamp.qingkequn.com/author-info-bg.png') center center no-repeat;*/
+	/*background-size:314rpx 974rpx ;*/
 }
 .author-intro .right .inner-left .photo,
 .author-intro .right .inner-left .product
@@ -89,7 +90,7 @@
 	width:314rpx;
 	height:974rpx;
 	line-height: 50rpx;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
 	writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
 	font-size: 32rpx;

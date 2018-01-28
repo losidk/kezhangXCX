@@ -43,6 +43,5 @@ App({
       image:'../../images/wu.png',
       duration:2000
     });
-    return;
   }
 })

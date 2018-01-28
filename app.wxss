@@ -49,3 +49,11 @@ button::after{
 }
 /*按钮按下去的样式类*/
 
+scroll-view{
+
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

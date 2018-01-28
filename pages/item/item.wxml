@@ -5,29 +5,30 @@
 		<view class="left fl">
 			<view class="left fl" >
 				<!-- 作者 -->
-				<view class="author">
+				<navigator url="../author-intro/author-intro?firstId={{activeId}}" class="author">
 				{{stampDesc.logiciansName}}
-				</view>
+				</navigator>
 				<!-- 翻页 -->
 				<view class="next" size="default" ></view>
 			</view>
 		</view>
 			<!-- 印详细信息 -->
-			<scroll-view scroll-y class="right fr clearfix">
+			<!-- <scroll-view scroll-y class="right fr clearfix"> -->
+			<view class="right fr clearfix">
 
 				<!-- 印稿 -->
-				<view class="img-box" >
-					<image src="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
+				<view class="img-box" wx:if="{{stampDesc.sealMapBean.imgurl}}">
+					<image data-url="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" src="https://stamp.qingkequn.com/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 				<!-- 边款 -->
-				<view class="side-box" >
-					<image src="https://stamp.qingkequn.com/{{stampDesc.sideImg[0].imgurl}}" mode="widthFix"></image>
+				<view class="side-box" vx:if="{{stampDesc.sideImg[0].imgurl}}">
+					<image data-url="https://stamp.qingkequn.com/{{stampDesc.sideImg[0].imgurl}}" src="https://stamp.qingkequn.com/{{stampDesc.sideImg[0].imgurl}}" mode="widthFix" bindtap="previewImgHandle" ></image>
 				</view>
 				<!-- 原印 -->
-				<!-- <view class="img-box" > -->
-					<!-- <image src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix"></image> -->
-				<!-- </view> -->
-			</scroll-view>
+				<view class="img-box" wx:if="{{stampDesc.orgMapBean}}" >
+					<image data-url="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" src="https://stamp.qingkequn.com/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
+				</view>
+			</view>
 	</view>
   <!-- 释文、边款、详情 -->
   <view class="item-box fr" style="">
@@ -36,18 +37,19 @@
 			<!-- 释文、边款、详情（展开页） -->
   		<scroll-view scroll-y animation="{{animationData}}" class="stamp-desc" >
   			<!-- 释文 -->
-				<scroll-view scroll-y class="explain" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx ">
+				<view scroll-y class="explain" >
 					<view class="inner-box"><text class="strong">释文：</text><text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.orgMapBean.chars}}</text></view>
-				</scroll-view>
+				</view>
 				<!-- 边款 -->
-				<scroll-view scroll-y class="side" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
+				<view scroll-y class="side">
+					<!-- <view scroll-y class="side" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  "> -->
 					<view class="inner-box">
 						<text class="strong">边款：</text>
 					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.sideImg.chars}}</text>
 				</view>
-				</scroll-view>
+				</view>
 				<!-- 详情 -->
-				<scroll-view scroll-y class="desc" style="background:url('https://stamp.qingkequn.com/desc.png') no-repeat center center;background-size: 584rpx 140rpx  ">
+				<scroll-view scroll-y  class="desc" >
 					<view class="inner-box">
 					<text class="strong">详情：</text>
 					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.stampIntro}}</text>

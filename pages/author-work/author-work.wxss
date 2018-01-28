@@ -20,25 +20,30 @@
 }
 /*名家*/
 .author{
-	width:50rpx;
+	width:46rpx;
 	height:188rpx;
 	line-height:60rpx;
-	background-color: #D4CBB8;
-	margin-top:22rpx;
-	margin-bottom:580rpx;
+	/*background-color: #D4CBB8;*/
+	margin-top:34rpx;
+	margin-bottom:329rpx;
 	color:#fff;
 	text-align: center;
 	font-family: 'FangSong_GB2312';
 	font-weight: 700;
 	padding:0;
+	margin-left:4rpx;
 }
 /*翻下页*/
-.next[type='default']{
+.next[type='default'],.prev[type='default']{
 	width:50rpx;
 	height:160rpx;
 	background-color: transparent;
 	padding-left:0;
 	padding-right:0;
+}
+/*翻上页*/
+.prev[type='default']{
+	/*background-color: pink;*/
 }
 /*单个印章列表*/
  .right{
@@ -49,34 +54,39 @@
 
 /*单个印章*/
 .search-result .right .item{
-	width:160rpx;
+	width:159rpx;
 	height:490rpx;
-	/*background-color: pink;*/
 	padding:0;
 	position: relative;
+	/*margin-left:10rpx;*/
+	text-align: center;
 }
 .search-result .right .item image{
-	margin-top:50rpx;
-	width:95%;
-	/*height:156rpx;*/
+	margin-top:40rpx;
+	height:244rpx;
+	max-width:126rpx;
+	max-height:244rpx;
+	margin-left:2rpx;
 }
 /*简介描述*/
 .search-result .right .item .desc{
 	position: absolute;
-	left:50%;
-	transform: translate(-50%,0);
-	bottom:50rpx;
-	margin:0 auto;
-	text-align: center;
-	width:74rpx;
-	color:#9E8768;
-	font-family:'FangSong_GB2312';
-
-  text-overflow:ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
+		left:50%;
+		transform: translate(-50%,0);
+		bottom:25rpx;
+		margin:0 auto;
+		text-align: center;
+		width:38rpx;
+		color:#9E8768;
+		font-family:'FangSong_GB2312';
+	  text-overflow:ellipsis;
+	  display: -webkit-box;
+	  -webkit-box-orient: vertical;
+	  -webkit-line-clamp: 4;
+	  overflow: hidden;
+	  /*background-color: pink;*/
+	  height:150rpx;
+	  line-height: 38rpx;
 }
 .search-result .right .item .desc text{
 

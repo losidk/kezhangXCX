@@ -1,4 +1,5 @@
 <!--author-work.wxml-->
+<!-- <view style="background:url('https://stamp.qingkequn.com/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container"> -->
 <view style="background:url('https://stamp.qingkequn.com/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 
 
@@ -12,6 +13,9 @@
 				{{searchResult.logiciansName}}
 			</navigator>
 
+			<!-- 翻上页 -->
+			<button class="prev" type="default" size="default" bindtap="searchStampHandle"></button>
+
 			<!-- 翻下页 -->
 			<button class="next" type="default" size="default" bindtap="searchStampHandle"></button>
 		</view>
@@ -20,7 +24,7 @@
 		<scroll-view scroll-y class="right fr clearfix">
 			<!-- 单个印章 -->
 			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
-				<image src="https://stamp.qingkequn.com/{{item.showImg}}" mode="widthFix"></image>
+				<image src="https://stamp.qingkequn.com/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
 					<!-- <text> -->

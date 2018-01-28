@@ -41,20 +41,12 @@ Page({
           console.log(res);
           // 错误处理
           if(res.statusCode!=200){
-            wx.showToast({
-              title: '获取名家列表失败',
-              icon: 'loading',
-              duration: 2000
-            })
+            app.toast('获取名家列表失败');
             return;
           }
           //未请求到数据
           if(res.data.data.stampList.length==0){
-            wx.showToast({
-              title:'无更多内容',
-              icon:'success',
-              duration:2000
-            });
+            app.toast('无更多内容');
             return;
           }
           // 设置最新的allNum（用于翻页）

@@ -5,6 +5,11 @@
 	position: relative;
 	overflow: hidden;
 }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
 /*搜索结果页*/
 .item-result{
 	width:636rpx;
@@ -46,6 +51,7 @@
 	width:584rpx;
 	height:966rpx;
 	margin-top:8rpx;
+	overflow-y: scroll;
 }
 /*印章图片（印稿、底面、边款）*/
 .img-box,.side-box{
@@ -83,19 +89,23 @@
 .stamp-desc{
 	height:432rpx;
 	width:0rpx;
-	background-color: transparent;
+	background:url('https://stamp.qingkequn.com/desc.png');
+	background-size:584rpx 432rpx;
 	position: absolute;
 	left:0rpx;
 	bottom:-5rpx;
+	overflow: hidden;
 }
 /*释文、边款、详情*/
 .explain,.side,.desc{
 	width:584rpx;
-	height:140rpx;
-	line-height:140rpx;
+	height:144rpx;
+	line-height:144rpx;
 	box-sizing: border-box;
 	padding-left:50rpx;
 	color:#CBB4A5;
+	/*overflow-x:scroll;*/
+	/*overflow-y: hidden;*/
 }
 .explain,.side,.desc .inner-box{
 	width:584rpx;
