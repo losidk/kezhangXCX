@@ -34,7 +34,7 @@ App({
     })
   },
   globalData: {
-    baseUrl:'https://stamp.qingkequn.com/'
+    baseUrl:'http://47.93.44.165:3389/'
   },
   toast:function(str){
     wx.showToast({

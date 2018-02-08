@@ -67,7 +67,7 @@
 	height:980rpx;
 }
  .right.searched{
- 	background:url('https://stamp.qingkequn.com/search-bg2.png') no-repeat center center;
+ 	background:url('http://47.93.44.165:3389/search-bg2.png') no-repeat center center;
  	background-size:486rpx 980rpx ;
  }
  .search-result-swiper{

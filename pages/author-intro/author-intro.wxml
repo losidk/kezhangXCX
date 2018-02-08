@@ -1,5 +1,5 @@
 <!--名家介绍.wxml-->
-<view class="intro-container" style="background:url('https://stamp.qingkequn.com/author-intro-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;">
+<view class="intro-container" style="background:url('http://47.93.44.165:3389/author-intro-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;">
 
 	<!-- 名家介绍 -->
 	<view class="author-intro clearfix">
@@ -20,12 +20,12 @@
 				<!-- 头像 -->
 				<view class="photo">
 					<view>
-						<image src="https://stamp.qingkequn.com/{{authorInfo.headimgurl}}" mode="aspectFill"></image>
+						<image src="http://47.93.44.165:3389/{{authorInfo.headimgurl}}" mode="aspectFill"></image>
 					</view>
 				</view>
 				<!-- 代表作品 -->
 				<view class="product">
-					<image src="https://stamp.qingkequn.com/{{authorInfo.pstamp}}" mode="widthFix"></image>
+					<image src="http://47.93.44.165:3389/{{authorInfo.pstamp}}" mode="widthFix"></image>
 				</view>
 			</view>
 			<!-- 简介 -->
