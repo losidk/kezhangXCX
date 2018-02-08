@@ -24,7 +24,7 @@
 		<scroll-view scroll-y class="right fr clearfix">
 			<!-- 单个印章 -->
 			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
-				<image src="http://47.93.44.165:3389/{{item.showImg}}" mode="aspectFit"></image>
+				<image src="http://47.93.44.165:3389/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
 					<!-- <text> -->

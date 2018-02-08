@@ -201,6 +201,7 @@
 	height:218rpx;
 	text-align: center;
 	padding-left:12rpx;
+	overflow:hidden;
 }
 /*未选中状态*/
 .author-item>.not-active{
@@ -211,7 +212,7 @@
 	width:60rpx;
 	height:218rpx;
 	border-bottom:.5rpx solid #fff;
-
+	overflow:hidden;
 	text-align: center;
 	padding-left:12rpx;
 }

@@ -18,15 +18,15 @@
 
 				<!-- 印稿 -->
 				<view class="img-box" wx:if="{{stampDesc.sealMapBean.imgurl}}">
-					<image data-url="http://47.93.44.165:3389/{{stampDesc.sealMapBean.imgurl}}" src="http://47.93.44.165:3389/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
+					<image data-url="http://47.93.44.165:3389/api/aliyun/oss/{{stampDesc.sealMapBean.imgurl}}" src="http://47.93.44.165:3389/api/aliyun/oss{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 				<!-- 边款 -->
 				<view class="side-box" wx:if="{{stampDesc.sideImg[0]}}">
-					<image data-url="http://47.93.44.165:3389/{{stampDesc.sideImg[0].imgurl}}" src="http://47.93.44.165:3389/{{stampDesc.sideImg[0].imgurl}}" mode="widthFix" bindtap="previewImgHandle" ></image>
+					<image data-url="http://47.93.44.165:3389/api/aliyun/oss{{stampDesc.sideImg[0].imgurl}}" src="http://47.93.44.165:3389/api/aliyun/oss{{stampDesc.sideImg[0].imgurl}}" mode="widthFix" bindtap="previewImgHandle" ></image>
 				</view>
 				<!-- 原印 -->
 				<view class="img-box" wx:if="{{stampDesc.orgMapBean}}" >
-					<image data-url="http://47.93.44.165:3389/{{stampDesc.orgMapBean.imgurl}}" src="http://47.93.44.165:3389/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
+					<image data-url="http://47.93.44.165:3389/api/aliyun/oss{{stampDesc.orgMapBean.imgurl}}" src="http://47.93.44.165:3389/api/aliyun/oss{{stampDesc.orgMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 			</view>
 	</view>

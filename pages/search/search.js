@@ -67,18 +67,19 @@ Page({
       type:"post",
       dataType:'json',
       success:(res)=>{
+        console.log(res);
         // 错误处理
         if(res.statusCode!=200){
           app.toast('获取名家列表失败');
           return;
         };
-        if(res.data.data.length!==this.data.size){
-          app.toast('没有更多数据了');
-          return;
-        }
         this.setData({
           "authorList":res.data.data
         })
+        // if(res.data.data.length!==this.data.size){
+        //   app.toast('没有更多数据了');
+        //   return;
+        // }
       }
     });
   },

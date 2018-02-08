@@ -68,13 +68,13 @@ Page({
         var sealUrl = 'http://47.93.44.165:3389/wu-small.png';
         var sideUrl = 'http://47.93.44.165:3389/wu-small.png';
         if(res.data.data.orgMapBean){
-          orgUrl ='http://47.93.44.165:3389/'+res.data.data.orgMapBean.imgurl;
+          orgUrl ='http://47.93.44.165:3389/api/aliyun/oss/'+res.data.data.orgMapBean.imgurl;
         }
         if(res.data.data.sealMapBean){
-          sealUrl ='http://47.93.44.165:3389/'+res.data.data.sealMapBean.imgurl;
+          sealUrl ='http://47.93.44.165:3389/api/aliyun/oss/'+res.data.data.sealMapBean.imgurl;
         }
         if(res.data.data.sideImg[0]){
-          sideUrl ='http://47.93.44.165:3389/'+res.data.data.sideImg[0].imgurl;
+          sideUrl ='http://47.93.44.165:3389/api/aliyun/oss/'+res.data.data.sideImg[0].imgurl;
         }
 
         _this.setData({
