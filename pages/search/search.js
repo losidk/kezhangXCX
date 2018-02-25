@@ -14,12 +14,13 @@ Page({
     secondId: 0, //未选择名家时搜索到的id
     searched: false, //是否查询过
     allNum: 0, //已搜索索引
-    prevAllNmu: 0, //搜索上一页allNum
+    preAllNum: 0, //搜索上一页allNum
+    preStatus: false, //搜索上一页激活
     searchValue: null, //所搜框内容
     disabled: true,
     choosed: false, //是否选择名家
     allNumList: [0, 6], //allNum
-    prevAllNumList: [] // 向上翻页标记
+    preAllNumList: [] // 向上翻页标记
   },
   onLoad: function() {},
   onReady: function() {
@@ -157,6 +158,9 @@ Page({
     //   }
     // });
     // console.log(this.data.allNumList);
+    this.setData({
+      preStatus: false
+    })
     this.globalSearchHandle(this.data.allNum);
   },
   // 未选择名家翻上页 查询
@@ -209,7 +213,11 @@ Page({
     //     });
     //   }
     // });
-
+    console.log(this.data.preAllNum);
+    this.setData({
+      preStatus: true
+    });
+    this.globalSearchHandle(this.data.preAllNum);
   },
   // 查询印章
   searchStampHandle: function() {
@@ -220,13 +228,15 @@ Page({
     var allNum = (allNum - 0) || 0;
     var _this = this;
 
+
+
     // let innerAllNumList = this.data.allNumList;
 
     // console.log(innerAllNumList);
     // 未选择名家、已输入搜索关键字
     if (this.data.activeId == 0 && this.data.chars.trim() !== '') {
       this.setData({
-        'disabled': true,
+        // 'disabled': true,
         'searchResult': []
       });
       wx.request({
@@ -251,17 +261,34 @@ Page({
             return;
           }
 
+          if (_this.data.preStatus && _this.data.preAllNum == 0) {
+            app.toast('无更多内容');
+            return;
+          }
+
+
           // innerAllNumList.push(res.data.data.allNum);
           // console.log(innerAllNumList);
 
           // 设置最新的allNum（用于翻页）
+
           _this.setData({
             'searchResult': res.data.data,
-            'allNum': res.data.data.allNum,
-            'prevAllNum': res.data.data.preAllNum,
+            'allNum': res.data.data.preAllNum,
+            'preAllNum': res.data.data.preAllNum,
             'secondId': res.data.data.logiciansId,
             'searched': true
           });
+
+          if (res.data.data.preAllNum !== 0 && _this.data.preStatus) {
+            _this.setData({
+
+              // 'preAllNum': res.data.data.preAllNum - 1
+            })
+          } else if (_this.data.preStatus) {
+            app.toast('无更多内容');
+            return;
+          }
 
         }
       });
@@ -310,7 +337,7 @@ Page({
           _this.setData({
             'searchResult': res.data.data,
             'allNum': res.data.data.allNum,
-            'prevAllNum': res.data.data.preAllNum,
+            'preAllNum': res.data.data.preAllNum,
             'firstId': res.data.data.logiciansId,
             'searched': true
           });
@@ -330,6 +357,9 @@ Page({
       // 关闭名家列表
       this.closeAuthorListHandle();
     }
+
+    // console.log(this.data.allNum);
+    // console.log(this.data.preAllNum);
   },
   // //选择名家搜索下一页：
   // selectedAuthorLoadMoreHandle: function() {
@@ -373,13 +403,13 @@ Page({
     // let _this = this;
     // let innerAllNumList = this.data.allNumList;
     // // console.log(innerAllNumList);
-    // // console.log(this.data.prevAllNumList);
-    // if (this.data.prevAllNumList.length == this.data.allNumList.length) {
+    // // console.log(this.data.preAllNumList);
+    // if (this.data.preAllNumList.length == this.data.allNumList.length) {
     //   app.toast('没有更多数据');
     //   return;
     // }
     // this.setData({
-    //   'prevAllNumList': this.data.allNumList
+    //   'preAllNumList': this.data.allNumList
     // });
 
     // innerAllNumList.pop();

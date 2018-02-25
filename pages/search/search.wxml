@@ -11,15 +11,14 @@
 				{{searchResult.logiciansName}}
 			</navigator>
 			<view class="author" wx:else="{{!searched}}">
-
 			</view>
 
 			<!-- 未选择名家 翻上页 disabled = true -->
-			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button>
+			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle" ></button>
 
 			<!-- 输入名家 翻下页 disabled = false -->
-			<button class="prev" type="default" size="default" bindtap="selectedAuthorPrevMoreHandle" disabled="{{disabled}}"
-			wx:else="{{!disabled}}"></button>
+			<!-- <button class="prev" type="default" size="default" bindtap="selectedAuthorPrevMoreHandle" disabled="{{disabled}}"
+			wx:else="{{!disabled}}"></button> -->
 
 			<!-- 未选择名家 翻下页 disabled = true -->
 			<!-- <button class="next" type="default" size="default" bindtap="nextSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button> -->
