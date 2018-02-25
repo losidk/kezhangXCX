@@ -4,7 +4,6 @@
 	<!-- <view class="search-result clearfix" style="background:url('http://47.93.44.165:3389/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx"> -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
-		<!-- <view class="left fl" style="background:url('../../images/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx"> -->
 		<view class="left fl" style="background:url('http://47.93.44.165:3389/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 		<!-- <view class="left fl"> -->
 			<!-- 作者 -->
@@ -23,17 +22,19 @@
 			wx:else="{{!disabled}}"></button>
 
 			<!-- 未选择名家 翻下页 disabled = true -->
-			<button class="next" type="default" size="default" bindtap="nextSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button>
+			<!-- <button class="next" type="default" size="default" bindtap="nextSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button> -->
+			<button class="next" type="default" size="default" bindtap="nextSearchStampHandle"></button>
 
 			<!-- 输入名家 翻下页 disabled = false -->
-			<button class="next" type="default" size="default" bindtap="selectedAuthorLoadMoreHandle" disabled="{{disabled}}"
-			wx:else="{{!disabled}}"></button>
+			<!-- <button class="next" type="default" size="default" bindtap="selectedAuthorLoadMoreHandle" disabled="{{disabled}}"
+			wx:else="{{!disabled}}"></button> -->
 		</view>
 
 		<!--查到的 印详细信息 -->
 		<scroll-view scroll-y class="right fr clearfix {{searched?'searched':''}}">
 			<!-- 单个印章 -->
 			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
+				<!-- 生产环境 -->
 				<image src="http://47.93.44.165:3389/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">

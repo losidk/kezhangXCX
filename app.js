@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,14 +34,15 @@ App({
     })
   },
   globalData: {
-    baseUrl:'http://47.93.44.165:3389/'
+    baseUrl: 'http://47.93.44.165:3389/'
+    // baseUrl: 'https://stamp.qingkequn.com/'
   },
-  toast:function(str){
+  toast: function(str) {
     wx.showToast({
-      title:str,
-      icon:'success',
-      image:'../../images/wu.png',
-      duration:2000
+      title: str,
+      icon: 'success',
+      image: '../../images/wu.png',
+      duration: 2000
     });
   }
 })
