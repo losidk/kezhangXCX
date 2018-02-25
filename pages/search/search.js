@@ -15,6 +15,7 @@ Page({
     searched: false, //是否查询过
     allNum: 0, //已搜索索引
     preAllNum: 0, //搜索上一页allNum
+    lastNum: 0, //当前搜索条数
     preStatus: false, //搜索上一页激活
     searchValue: null, //所搜框内容
     disabled: true,
@@ -158,10 +159,10 @@ Page({
     //   }
     // });
     // console.log(this.data.allNumList);
-    this.setData({
-      preStatus: false
-    })
-    this.globalSearchHandle(this.data.allNum);
+    // this.setData({
+    //   preStatus: false
+    // })
+    this.globalSearchHandle(this.data.allNum, this.data.lastNum);
   },
   // 未选择名家翻上页 查询
   prevSearchStampHandle: function() {
@@ -217,18 +218,24 @@ Page({
     this.setData({
       preStatus: true
     });
-    this.globalSearchHandle(this.data.preAllNum);
+    if (this.data.preAllNum < 0) {
+      this.setData({
+        'preAllNum': 0
+      })
+      app.toast('无更多内容');
+      return;
+    }
+    this.globalSearchHandle(this.data.preAllNum, this.data.lastNum);
   },
   // 查询印章
   searchStampHandle: function() {
-    this.globalSearchHandle(0);
+    this.globalSearchHandle(0, 0);
   },
   // 搜索印章方法封装：
-  globalSearchHandle: function(allNum) {
+  globalSearchHandle: function(allNum, lastNum) {
     var allNum = (allNum - 0) || 0;
+    var lastNum = (lastNum - 0) || 0;
     var _this = this;
-
-
 
     // let innerAllNumList = this.data.allNumList;
 
@@ -246,6 +253,7 @@ Page({
           'chars': this.data.chars, //搜索印章关键字
           'size': 6, //每页显示的数据个数
           'allNum': allNum,
+          'lastNum': lastNum
         },
         dataType: 'json',
         success: function(res) {
@@ -261,34 +269,33 @@ Page({
             return;
           }
 
-          if (_this.data.preStatus && _this.data.preAllNum == 0) {
-            app.toast('无更多内容');
-            return;
-          }
+          // if (_this.data.preStatus && _this.data.preAllNum == 0) {
+          //   app.toast('无更多内容');
+          //   return;
+          // }
 
 
-          // innerAllNumList.push(res.data.data.allNum);
-          // console.log(innerAllNumList);
 
           // 设置最新的allNum（用于翻页）
 
           _this.setData({
             'searchResult': res.data.data,
-            'allNum': res.data.data.preAllNum,
+            'lastNum': res.data.data.stampList.length,
+            'allNum': res.data.data.allNum,
             'preAllNum': res.data.data.preAllNum,
             'secondId': res.data.data.logiciansId,
             'searched': true
           });
 
-          if (res.data.data.preAllNum !== 0 && _this.data.preStatus) {
-            _this.setData({
+          // if (res.data.data.preAllNum !== 0 && _this.data.preStatus) {
+          //   _this.setData({
 
-              // 'preAllNum': res.data.data.preAllNum - 1
-            })
-          } else if (_this.data.preStatus) {
-            app.toast('无更多内容');
-            return;
-          }
+          //     // 'preAllNum': res.data.data.preAllNum - 1
+          //   })
+          // } else if (_this.data.preStatus) {
+          //   app.toast('无更多内容');
+          //   return;
+          // }
 
         }
       });
@@ -320,6 +327,7 @@ Page({
           'logiciansId': this.data.activeId, //名家id
           'chars': this.data.chars, //搜索印章关键字
           'allNum': allNum, //
+          'lastNum': lastNum,
           'size': 6, //每页显示的数据个数
         },
         dataType: 'json',
@@ -337,6 +345,7 @@ Page({
           _this.setData({
             'searchResult': res.data.data,
             'allNum': res.data.data.allNum,
+            'lastNum': res.data.data.stampList.length,
             'preAllNum': res.data.data.preAllNum,
             'firstId': res.data.data.logiciansId,
             'searched': true
@@ -399,7 +408,6 @@ Page({
   // },
   //选择名家搜索上一页：
   selectedAuthorPrevMoreHandle: function() {
-
     // let _this = this;
     // let innerAllNumList = this.data.allNumList;
     // // console.log(innerAllNumList);
@@ -455,7 +463,6 @@ Page({
     //     });
     //   }
     // });
-
     console.log('选中名家搜索上页');
   }
 })
