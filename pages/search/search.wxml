@@ -13,20 +13,13 @@
 			<view class="author" wx:else="{{!searched}}">
 			</view>
 
-			<!-- 未选择名家 翻上页 disabled = true -->
+			<!-- 上一页 -->
 			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle" ></button>
 
-			<!-- 输入名家 翻下页 disabled = false -->
-			<!-- <button class="prev" type="default" size="default" bindtap="selectedAuthorPrevMoreHandle" disabled="{{disabled}}"
-			wx:else="{{!disabled}}"></button> -->
-
-			<!-- 未选择名家 翻下页 disabled = true -->
-			<!-- <button class="next" type="default" size="default" bindtap="nextSearchStampHandle" disabled="{{!disabled}}" wx:if="{{disabled}}"></button> -->
+			<!-- 下一页 -->
 			<button class="next" type="default" size="default" bindtap="nextSearchStampHandle"></button>
 
-			<!-- 输入名家 翻下页 disabled = false -->
-			<!-- <button class="next" type="default" size="default" bindtap="selectedAuthorLoadMoreHandle" disabled="{{disabled}}"
-			wx:else="{{!disabled}}"></button> -->
+
 		</view>
 
 		<!--查到的 印详细信息 -->
