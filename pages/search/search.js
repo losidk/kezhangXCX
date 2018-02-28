@@ -16,12 +16,9 @@ Page({
     allNum: 0, //已搜索索引
     preAllNum: 0, //搜索上一页allNum
     lastNum: 0, //当前搜索条数
-    preStatus: false, //搜索上一页激活
     searchValue: null, //所搜框内容
     disabled: true,
     choosed: false, //是否选择名家
-    allNumList: [0, 6], //allNum
-    preAllNumList: [] // 向上翻页标记
   },
   onLoad: function() {},
   onReady: function() {
