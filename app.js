@@ -34,8 +34,8 @@ App({
     })
   },
   globalData: {
-    baseUrl: 'http://47.93.44.165:3389/'
-    // baseUrl: 'https://stamp.qingkequn.com/'
+    // baseUrl: 'http://47.93.44.165:3389/'
+    baseUrl: 'https://api.duyin.ren/'
   },
   toast: function(str) {
     wx.showToast({

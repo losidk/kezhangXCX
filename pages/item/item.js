@@ -64,17 +64,17 @@ Page({
         console.log(res);
         // console.log(res.data.data.sideImg[0]);
 
-        var orgUrl = 'http://47.93.44.165:3389/wu-small.png';
-        var sealUrl = 'http://47.93.44.165:3389/wu-small.png';
-        var sideUrl = 'http://47.93.44.165:3389/wu-small.png';
+        var orgUrl = 'https://api.duyin.ren/wu-small.png';
+        var sealUrl = 'https://api.duyin.ren/wu-small.png';
+        var sideUrl = 'https://api.duyin.ren/wu-small.png';
         if (res.data.data.orgMapBean) {
-          orgUrl = 'http://47.93.44.165:3389/api/aliyun/oss/' + res.data.data.orgMapBean.imgurl;
+          orgUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.orgMapBean.imgurl;
         }
         if (res.data.data.sealMapBean) {
-          sealUrl = 'http://47.93.44.165:3389/api/aliyun/oss/' + res.data.data.sealMapBean.imgurl;
+          sealUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.sealMapBean.imgurl;
         }
         if (res.data.data.sideImg[0]) {
-          sideUrl = 'http://47.93.44.165:3389/api/aliyun/oss/' + res.data.data.sideImg[0].imgurl;
+          sideUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.sideImg[0].imgurl;
         }
 
         _this.setData({

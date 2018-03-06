@@ -3,7 +3,7 @@
   <!-- 引导页 -->
   <view class="guide" >
   	<navigator url="../search/search">
-  		<image src="http://47.93.44.165:3389/guide.png" mode="scaleToFill"></image>
+  		<image src="https://api.duyin.ren/guide.png" mode="scaleToFill"></image>
   	</navigator>
   </view>
 </view>

@@ -39,7 +39,7 @@
 .next{
 	width:49rpx;
 	height:170rpx;
-	background:url('http://47.93.44.165:3389/sidebar-bg.png')no-repeat center center;
+	background:url('https://api.duyin.ren/sidebar-bg.png')no-repeat center center;
 	background-size:49rpx 170rpx ;
 	padding-left:0;
 	padding-right:0;
@@ -89,7 +89,7 @@
 .stamp-desc{
 	height:432rpx;
 	width:0rpx;
-	background:url('http://47.93.44.165:3389/desc.png');
+	background:url('https://api.duyin.ren/desc.png');
 	background-size:584rpx 432rpx;
 	position: absolute;
 	left:0rpx;

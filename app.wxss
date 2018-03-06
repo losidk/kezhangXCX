@@ -3,7 +3,7 @@
 /**app.wxss**/
 @font-face {
     font-family: 'FangSong_GB2312';
-    src: url('http://47.93.44.165:3389/FangSong_GB2312.woff');
+    src: url('https://api.duyin.ren/FangSong_GB2312.woff');
     /*font-weight: normal;*/
     font-style: normal;
 }

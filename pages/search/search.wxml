@@ -1,10 +1,10 @@
 <!--search.wxml-->
-<view style="background:url('http://47.93.44.165:3389/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
+<view style="background:url('https://api.duyin.ren/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 	<!-- 搜索结果页面 -->
-	<!-- <view class="search-result clearfix" style="background:url('http://47.93.44.165:3389/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx"> -->
+	<!-- <view class="search-result clearfix" style="background:url('https://api.duyin.ren/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx"> -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
-		<view class="left fl" style="background:url('http://47.93.44.165:3389/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
+		<view class="left fl" style="background:url('https://api.duyin.ren/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 		<!-- <view class="left fl"> -->
 			<!-- 作者 -->
 			<navigator url="../author-intro/author-intro?firstId={{firstId}}&secondId={{secondId}}" class="author" wx:if="{{searched}}">
@@ -27,7 +27,7 @@
 			<!-- 单个印章 -->
 			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
 				<!-- 生产环境 -->
-				<image src="http://47.93.44.165:3389/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
+				<image src="https://api.duyin.ren/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
 						{{item.chars}}
@@ -36,10 +36,10 @@
 		</scroll-view>
 	</view>
   <!-- 查询页 -->
-  <view class="search-box fr" style="background:url('http://47.93.44.165:3389/search-box.png') no-repeat center center;background-size: 160rpx 972rpx;">
+  <view class="search-box fr" style="background:url('https://api.duyin.ren/search-box.png') no-repeat center center;background-size: 160rpx 972rpx;">
 		<textarea name="" id="" class="search-area" placeholder="输入文字"  bindinput="inputChangeHandle" value="{{searchValue}}"></textarea>
 		<!-- 名家 -->
-		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle"  style="background:url('http://47.93.44.165:3389/author.png') no-repeat center center ;background-size:64rpx 216rpx" ></button>
+		<button type="default" size="default" class="choose-author" bindtap="chooseAuthorHandle"  style="background:url('https://api.duyin.ren/author.png') no-repeat center center ;background-size:64rpx 216rpx" ></button>
 
 		<scroll-view scroll-y animation="{{animationData}}" class="author-list" bindscrolltolower="loadMoreHandle">
 			<view class="author-item " wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="isSelectedHandle" data-id="{{item.logiciansId}}" >
@@ -49,6 +49,6 @@
 			</view>
 		</scroll-view>
 		<!-- 查询 -->
-		<button type="default" size="default" value="" class="search-btn" bindtap="searchStampHandle" style="background:url('http://47.93.44.165:3389/search-btn.png') no-repeat center center ;background-size:64rpx 216rpx"></button>
+		<button type="default" size="default" value="" class="search-btn" bindtap="searchStampHandle" style="background:url('https://api.duyin.ren/search-btn.png') no-repeat center center ;background-size:64rpx 216rpx"></button>
   </view>
 </view>
