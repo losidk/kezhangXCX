@@ -25,7 +25,6 @@ Page({
     this.animationData = wx.createAnimation({
       duration: 500,
       timingFunction: 'ease'
-      // delay:10000
     })
     this.loadAuthorListHandle();
   },
@@ -67,7 +66,6 @@ Page({
       type: "post",
       dataType: 'json',
       success: (res) => {
-        console.log(res);
         // 错误处理
         if (res.statusCode != 200) {
           app.toast('获取名家列表失败');
@@ -76,10 +74,6 @@ Page({
         this.setData({
           "authorList": res.data.data
         })
-        // if(res.data.data.length!==this.data.size){
-        //   app.toast('没有更多数据了');
-        //   return;
-        // }
       }
     });
   },
@@ -107,7 +101,6 @@ Page({
 
   //搜索框文字变化
   inputChangeHandle: function(e) {
-    // console.log(e);
     this.setData({
       'chars': e.detail.value,
       'searchValue': e.detail.value
@@ -119,7 +112,7 @@ Page({
   },
   // 未选择名家翻上页 查询
   prevSearchStampHandle: function() {
-    if (this.data.preAllNum <= 0) {
+    if (this.data.preAllNum < 0) {
       this.setData({
         'preAllNum': 0
       })
@@ -155,7 +148,6 @@ Page({
         },
         dataType: 'json',
         success: function(res) {
-          console.log(res);
           // 错误处理
           if (res.statusCode != 200) {
             app.toast('获取名家列表失败');

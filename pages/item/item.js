@@ -1,4 +1,3 @@
-//item.js 章详情页
 //获取应用实例
 const app = getApp()
 
@@ -11,11 +10,9 @@ Page({
     imgList: []
   },
   onLoad: function(e) {
-    // console.log(e);
     this.setData({
       'stampId': e.stampId - 0
     });
-    // console.log(this.data.stampId);
     this.loadStampDesc();
   },
   onReady: function() {
@@ -26,7 +23,6 @@ Page({
   },
   //点击显示(隐藏)释文、边款、详情列表
   chooseAuthorHandle: function() {
-    // console.log('123');
     if (this.data.authorListStatus) {
       // 打开释文、边款、详情列表
       this.closeAuthorListHandle();
@@ -61,8 +57,6 @@ Page({
         stampId: this.data.stampId
       },
       success: function(res) {
-        console.log(res);
-        // console.log(res.data.data.sideImg[0]);
 
         var orgUrl = 'https://api.duyin.ren/wu-small.png';
         var sealUrl = 'https://api.duyin.ren/wu-small.png';
@@ -76,7 +70,6 @@ Page({
         if (res.data.data.sideImg[0]) {
           sideUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.sideImg[0].imgurl;
         }
-
         _this.setData({
           'stampDesc': res.data.data,
           'activeId': res.data.data.logiciansId,

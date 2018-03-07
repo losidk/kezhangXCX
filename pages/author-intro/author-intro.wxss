@@ -24,7 +24,6 @@
 	width:46rpx;
 	height:160rpx;
 	line-height:60rpx;
-	/*background-color: #D4CBB8;*/
 	margin-top:32rpx;
 	margin-bottom:580rpx;
 	color:#fff;
@@ -49,17 +48,13 @@
 .author-intro .right .inner-left{
 	width:314rpx;
 	height:974rpx;
-	/*background: url('http://47.93.44.165:3389/author-info-bg.png') center center no-repeat;*/
-	/*background-size:314rpx 974rpx ;*/
 }
 .author-intro .right .inner-left .photo,
 .author-intro .right .inner-left .product
 {
 	width:314rpx;
 	height:487rpx;
-	/*background-color: #fff;*/
 	overflow: hidden;
-	/*margin-top:-4rpx;*/
 }
 
 /*头像*/
@@ -90,8 +85,6 @@
 	width:314rpx;
 	height:974rpx;
 	line-height: 50rpx;
-	/*background-color: #fff;*/
-	writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
 	writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
 	font-size: 32rpx;
 	color:#CABDAC;

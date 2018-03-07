@@ -1,12 +1,8 @@
 <!--author-work.wxml-->
-<!-- <view style="background:url('https://api.duyin.ren/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container"> -->
 <view style="background:url('https://api.duyin.ren/author-work-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
-
-
 	<!-- 搜索结果页面 -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
-
 		<view class="left fl">
 			<!-- 作者 -->
 			<navigator url="../author-intro/author-intro?firstId={{activeId}}&secondId={{activeId}}" class="author" >
@@ -27,9 +23,7 @@
 				<image src="https://api.duyin.ren/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
 				<view class="desc">
-					<!-- <text> -->
 						{{item.chars}}
-					<!-- </text> -->
 				</view>
 			</navigator>
 		</scroll-view>

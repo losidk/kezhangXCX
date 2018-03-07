@@ -13,7 +13,6 @@
 			</view>
 		</view>
 			<!-- 印详细信息 -->
-			<!-- <scroll-view scroll-y class="right fr clearfix"> -->
 			<view class="right fr clearfix">
 
 				<!-- 印稿 -->
@@ -42,7 +41,6 @@
 				</view>
 				<!-- 边款 -->
 				<view scroll-y class="side">
-					<!-- <view scroll-y class="side" style="background:url('https://api.duyin.ren/desc.png') no-repeat center center;background-size: 584rpx 140rpx  "> -->
 					<view class="inner-box">
 						<text class="strong">边款：</text>
 					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.sideImg.chars}}</text>

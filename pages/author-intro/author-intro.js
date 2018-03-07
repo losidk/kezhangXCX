@@ -10,7 +10,6 @@ Page({
     authorInfo:{}
   },
   onLoad: function (e) {
-    console.log(e);
     this.setData({
       'firstId':e.firstId-0,
       'secondId':e.secondId-0
@@ -30,7 +29,6 @@ Page({
       },
       type:'post',
       success:function(res){
-        console.log(res);
         _this.setData({
           'authorInfo':res.data.data
         });
@@ -43,7 +41,6 @@ Page({
     this.setData({
       'logiciansId':_this.data.firstId||_this.data.secondId
     });
-    console.log(this.data.logiciansId);
     wx.navigateTo({
       url:'../author-work/author-work?logiciansId='+this.data.logiciansId
     })

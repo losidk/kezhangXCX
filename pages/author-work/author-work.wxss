@@ -23,7 +23,6 @@
 	width:46rpx;
 	height:188rpx;
 	line-height:60rpx;
-	/*background-color: #D4CBB8;*/
 	margin-top:34rpx;
 	margin-bottom:329rpx;
 	color:#fff;
@@ -43,13 +42,11 @@
 }
 /*翻上页*/
 .prev[type='default']{
-	/*background-color: pink;*/
 }
 /*单个印章列表*/
  .right{
 	width:647rpx;
 	height:980rpx;
-	/*background-color: pink;*/
 }
 
 /*单个印章*/
@@ -58,7 +55,6 @@
 	height:490rpx;
 	padding:0;
 	position: relative;
-	/*margin-left:10rpx;*/
 	text-align: center;
 }
 .search-result .right .item image{
@@ -84,10 +80,6 @@
 	  -webkit-box-orient: vertical;
 	  -webkit-line-clamp: 4;
 	  overflow: hidden;
-	  /*background-color: pink;*/
 	  height:150rpx;
 	  line-height: 38rpx;
-}
-.search-result .right .item .desc text{
-
 }

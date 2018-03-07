@@ -69,8 +69,6 @@
 	height:972rpx;
 	margin:0;
 	box-sizing: border-box;
-	/*margin-right:68rpx;*/
-	/*margin-top:140rpx;*/
 	position: absolute;
 	right:64rpx;
 	top:140rpx;
@@ -104,8 +102,6 @@
 	box-sizing: border-box;
 	padding-left:50rpx;
 	color:#CBB4A5;
-	/*overflow-x:scroll;*/
-	/*overflow-y: hidden;*/
 }
 .explain,.side,.desc .inner-box{
 	width:584rpx;

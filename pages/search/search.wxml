@@ -1,7 +1,6 @@
 <!--search.wxml-->
 <view style="background:url('https://api.duyin.ren/search-bg.png') no-repeat center center;background-size: 750rpx 1200rpx;" class="search-container">
 	<!-- 搜索结果页面 -->
-	<!-- <view class="search-result clearfix" style="background:url('https://api.duyin.ren/search-bg.png')no-repeat center right;background-size: 477rpx 977rpx"> -->
 	<view class="search-result clearfix">
 		<!-- 名家、翻页 -->
 		<view class="left fl" style="background:url('https://api.duyin.ren/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">

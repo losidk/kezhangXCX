@@ -10,9 +10,6 @@
 view,text,input,textarea{
 
 	font-family:'FangSong_GB2312';
-	/*font-family:'FangSong';*/
-	/*font-family:'LiSong Pro Light ';*/
-	/*font-weight: 900;*/
 	color:#716253;
 }
 .container {
@@ -22,7 +19,6 @@ view,text,input,textarea{
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  /*font-family:'FangSong';*/
   font-family:'FangSong_GB2312';
 }
 .fl{
