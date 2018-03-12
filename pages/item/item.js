@@ -5,6 +5,11 @@ Page({
   data: {
     stampId: -1,
     stampDesc: {},
+    stampIntro:null,//详情
+    stampSideIntro:'无',//边款
+    orgMapBean:null,//
+    sideUrl:null,
+    sealUrl:null,
     animationData: '', //释文、边款、详情列表动画
     activeId: 0, //名家id
     imgList: []
@@ -61,20 +66,35 @@ Page({
         var orgUrl = 'https://api.duyin.ren/wu-small.png';
         var sealUrl = 'https://api.duyin.ren/wu-small.png';
         var sideUrl = 'https://api.duyin.ren/wu-small.png';
-        if (res.data.data.orgMapBean) {
+        if (res.data.data.orgMapBean.imgurl!=='null') {
           orgUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.orgMapBean.imgurl;
+          _this.setData({
+            'orgMapBean':orgUrl
+          })
         }
-        if (res.data.data.sealMapBean) {
+        if (res.data.data.sealMapBean.imgurl!=='null') {
           sealUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.sealMapBean.imgurl;
+          _this.setData({
+            'sealUrl':sealUrl
+          })
         }
-        if (res.data.data.sideImg[0]) {
+        if (res.data.data.sideImg[0].imgurl!=='null') {
           sideUrl = 'https://api.duyin.ren/api/aliyun/oss/' + res.data.data.sideImg[0].imgurl;
+          _this.setData({
+            'sideUrl':'https://api.duyin.ren/api/aliyun/oss/'+res.data.data.sideImg[0].imgurl
+          })
         }
         _this.setData({
           'stampDesc': res.data.data,
+          'stampIntro':res.data.data.sampIntro||'无',
           'activeId': res.data.data.logiciansId,
           'imgList': [sealUrl + '', sideUrl + '', orgUrl + '']
         });
+        if(res.data.data.sideImg[0].chars!=='null'){
+          _this.setData({
+            'stampSideIntro':res.data.data.sideImg[0].chars
+          })
+        }
       }
     });
   },

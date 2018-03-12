@@ -25,13 +25,14 @@
 /*名家*/
 .author{
 	width:42rpx;
-	height:160rpx;
+	height:178rpx;
+	line-height:60rpx;
 	background-color: #D4CBB8;
-	margin-top:44rpx;
+	margin-top:32rpx;
 	margin-bottom:580rpx;
 	color:#fff;
 	text-align: center;
-	margin-left:5px;
+	margin-left:8rpx;
 	font-family: 'FangSong_GB2312';
 	font-weight: 700;
 }
@@ -102,6 +103,7 @@
 	box-sizing: border-box;
 	padding-left:50rpx;
 	color:#CBB4A5;
+	overflow-y:scroll;
 }
 .explain,.side,.desc .inner-box{
 	width:584rpx;

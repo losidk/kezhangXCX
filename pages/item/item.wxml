@@ -5,9 +5,7 @@
 		<view class="left fl">
 			<view class="left fl" >
 				<!-- 作者 -->
-				<navigator url="../author-intro/author-intro?firstId={{activeId}}" class="author">
-				{{stampDesc.logiciansName}}
-				</navigator>
+				<navigator url="../author-intro/author-intro?firstId={{activeId}}" class="author">{{stampDesc.logiciansName}}</navigator>
 				<!-- 翻页 -->
 				<view class="next" size="default" ></view>
 			</view>
@@ -16,16 +14,16 @@
 			<view class="right fr clearfix">
 
 				<!-- 印稿 -->
-				<view class="img-box" wx:if="{{stampDesc.sealMapBean.imgurl}}">
+				<view class="img-box" wx:if="{{sealUrl}}">
 					<image data-url="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.sealMapBean.imgurl}}" src="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.sealMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 				<!-- 边款 -->
-				<view class="side-box" wx:if="{{stampDesc.sideImg[0]}}">
-					<image data-url="https://api.duyin.ren/api/aliyun/oss{{stampDesc.sideImg[0].imgurl}}" src="https://api.duyin.ren/api/aliyun/oss{{stampDesc.sideImg[0].imgurl}}" mode="widthFix" bindtap="previewImgHandle" ></image>
+				<view class="side-box" wx:if="{{sideUrl}}">
+					<image data-url="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.sideImg[0].imgurl}}" src="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.sideImg[0].imgurl}}" mode="widthFix" bindtap="previewImgHandle" ></image>
 				</view>
 				<!-- 原印 -->
-				<view class="img-box" wx:if="{{stampDesc.orgMapBean}}" >
-					<image data-url="https://api.duyin.ren/api/aliyun/oss{{stampDesc.orgMapBean.imgurl}}" src="https://api.duyin.ren/api/aliyun/oss{{stampDesc.orgMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
+				<view class="img-box" wx:if="{{orgMapBean}}" >
+					<image data-url="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.orgMapBean.imgurl}}" src="https://api.duyin.ren/api/aliyun/oss/{{stampDesc.orgMapBean.imgurl}}" mode="widthFix" bindtap="previewImgHandle"></image>
 				</view>
 			</view>
 	</view>
@@ -37,20 +35,20 @@
   		<scroll-view scroll-y animation="{{animationData}}" class="stamp-desc" >
   			<!-- 释文 -->
 				<view scroll-y class="explain" >
-					<view class="inner-box"><text class="strong">释文：</text><text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.orgMapBean.chars}}</text></view>
+					<view class="inner-box"><text class="strong">释文：</text><text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.chars}}</text></view>
 				</view>
 				<!-- 边款 -->
 				<view scroll-y class="side">
 					<view class="inner-box">
 						<text class="strong">边款：</text>
-					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.sideImg.chars}}</text>
+					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampSideIntro}}</text>
 				</view>
 				</view>
 				<!-- 详情 -->
 				<scroll-view scroll-y  class="desc" >
 					<view class="inner-box">
 					<text class="strong">详情：</text>
-					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampDesc.stampIntro}}</text>
+					<text style="font-family: 'FangSong_GB2312';font-weight:normal">{{stampIntro}}</text>
 			</view>
 				</scroll-view>
   		</scroll-view>

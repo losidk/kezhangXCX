@@ -5,9 +5,7 @@
 		<!-- 名家、翻页 -->
 		<view class="left fl">
 			<!-- 作者 -->
-			<navigator url="../author-intro/author-intro?firstId={{activeId}}&secondId={{activeId}}" class="author" >
-				{{searchResult.logiciansName}}
-			</navigator>
+			<navigator url="../author-intro/author-intro?firstId={{activeId}}&secondId={{activeId}}" class="author" >{{searchResult.logiciansName}}</navigator>
 
 			<!-- 翻上页 -->
 			<button class="prev" type="default" size="default" bindtap="prevSearchStampHandle"></button>
