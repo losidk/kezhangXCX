@@ -6,9 +6,7 @@
 		<view class="left fl" style="background:url('https://api.duyin.ren/result-left-bg.png') no-repeat center center;background-size: 50rpx 974rpx">
 		<!-- <view class="left fl"> -->
 			<!-- 作者 -->
-			<navigator url="../author-intro/author-intro?firstId={{firstId}}&secondId={{secondId}}" class="author" wx:if="{{searched}}">
-				{{searchResult.logiciansName}}
-			</navigator>
+			<navigator url="../author-intro/author-intro?firstId={{firstId}}&secondId={{secondId}}" class="author" wx:if="{{searched}}">{{searchResult.logiciansName}}</navigator>
 			<view class="author" wx:else="{{!searched}}">
 			</view>
 
@@ -42,9 +40,7 @@
 
 		<scroll-view scroll-y animation="{{animationData}}" class="author-list" bindscrolltolower="loadMoreHandle">
 			<view class="author-item " wx:for="{{authorList}}" wx:key="{{item.id}}" bindtap="isSelectedHandle" data-id="{{item.logiciansId}}" >
-				<view class="{{activeId==item.logiciansId?'active':'not-active'}}">
-				 	⊙{{item.name}}
-				</view>
+				<view class="{{activeId==item.logiciansId?'active':'not-active'}}">⊙{{item.name}}</view>
 			</view>
 		</scroll-view>
 		<!-- 查询 -->

@@ -57,7 +57,7 @@ Page({
         stampId: this.data.stampId
       },
       success: function(res) {
-
+        console.log(res.data.data);
         var orgUrl = 'https://api.duyin.ren/wu-small.png';
         var sealUrl = 'https://api.duyin.ren/wu-small.png';
         var sideUrl = 'https://api.duyin.ren/wu-small.png';
