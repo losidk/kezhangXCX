@@ -26,9 +26,7 @@
 				<!-- 生产环境 -->
 				<image src="https://api.duyin.ren/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
-				<view class="desc">
-						{{item.chars}}
-				</view>
+				<view class="desc">{{item.chars}}</view>
 			</navigator>
 		</scroll-view>
 	</view>

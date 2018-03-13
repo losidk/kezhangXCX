@@ -99,7 +99,9 @@
 .explain,.side,.desc{
 	width:584rpx;
 	height:144rpx;
-	line-height:144rpx;
+	box-sizing: border-box;
+	padding-top:32rpx;
+	line-height:90rpx;
 	box-sizing: border-box;
 	padding-left:50rpx;
 	color:#CBB4A5;

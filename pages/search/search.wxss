@@ -93,7 +93,8 @@
 	position: absolute;
 	left:50%;
 	transform: translate(-50%,0);
-	bottom:25rpx;
+	/*bottom:35rpx;*/
+	/*background-color: pink;*/
 	margin:0 auto;
 	text-align: center;
 	width:38rpx;
@@ -102,9 +103,9 @@
   text-overflow:ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   overflow: hidden;
-  height:150rpx;
+  height:175rpx;
   line-height: 38rpx;
 }
 /*搜索框（选择名家、搜索按钮）*/
