@@ -20,9 +20,7 @@
 			<navigator url="../item/item?stampId={{item.stampId}}" class="item fl" wx:for="{{searchResult.stampList}}" wx:key="{{item.id}}">
 				<image src="https://api.duyin.ren/api/aliyun/oss/{{item.showImg}}" mode="aspectFit"></image>
 				<!-- 简洁描述 -->
-				<view class="desc">
-						{{item.chars}}
-				</view>
+				<view class="desc">{{item.chars}}</view>
 			</navigator>
 		</scroll-view>
 	</view>
