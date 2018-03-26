@@ -22,7 +22,7 @@
 .author{
 	width:42rpx;
 	height:178rpx;
-	line-height:60rpx;
+	line-height:45rpx;
 	/*background-color: #D4CBB8;*/
 	margin-top:32rpx;
 	margin-bottom:336rpx;
@@ -182,7 +182,7 @@
 /*选中状态*/
 .author-item>.active{
 	box-sizing: border-box;
-	padding-top:20rpx;
+	padding-top:5rpx;
 	background-color: #fff;
 	color:#B4A292;
 	width:60rpx;
@@ -194,7 +194,7 @@
 /*未选中状态*/
 .author-item>.not-active{
 	box-sizing: border-box;
-	padding-top:20rpx;
+	padding-top:5rpx;
 	color:#fff;
 	background-color: #BAA99A;
 	width:60rpx;

@@ -22,7 +22,7 @@
 .author{
 	width:46rpx;
 	height:188rpx;
-	line-height:60rpx;
+	line-height:45rpx;
 	margin-top:34rpx;
 	margin-bottom:329rpx;
 	color:#fff;
