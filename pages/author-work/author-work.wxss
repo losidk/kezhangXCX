@@ -80,6 +80,6 @@
 	  -webkit-box-orient: vertical;
 	  -webkit-line-clamp: 5;
 	  overflow: hidden;
-	  height:175rpx;
+	  height:185rpx;
 	  line-height: 38rpx;
 }

@@ -98,22 +98,25 @@
 /*释文、边款、详情*/
 .explain,.side,.desc{
 	width:584rpx;
+	padding-right:20rpx;
+	/*background-color: pink;*/
 	height:144rpx;
 	box-sizing: border-box;
-	padding-top:32rpx;
-	line-height:60rpx;
+	padding-top:2rpx;
+	line-height:55rpx;
 	box-sizing: border-box;
 	padding-left:50rpx;
 	color:#CBB4A5;
 	overflow-y:scroll;
 }
-.explain,.side,.desc .inner-box{
-	width:584rpx;
+.explain .inner-box,.side .inner-box,.desc .inner-box{
+	/*width:564rpx;*/
+	width:100%;
 	box-sizing: border-box;
 	font-weight: 400;
 	/*padding-top:140rpx;*/
 }
-.explain,.side,.desc .inner-box>.strong{
+.explain .inner-box>.strong,.side .inner-box>.strong,.desc .inner-box>.strong{
 	font-family: 'FangSong_GB2312';
 	font-weight: 700;
 }

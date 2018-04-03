@@ -62,7 +62,6 @@ Page({
         stampId: this.data.stampId
       },
       success: function(res) {
-        console.log(res.data.data);
         var orgUrl = 'https://api.duyin.ren/wu-small.png';
         var sealUrl = 'https://api.duyin.ren/wu-small.png';
         var sideUrl = 'https://api.duyin.ren/wu-small.png';
@@ -84,9 +83,10 @@ Page({
             'sideUrl':'https://api.duyin.ren/api/aliyun/oss/'+res.data.data.sideImg[0].imgurl
           })
         }
+
         _this.setData({
           'stampDesc': res.data.data,
-          'stampIntro':res.data.data.sampIntro||'无',
+          'stampIntro':res.data.data.stampIntro||'无',
           'activeId': res.data.data.logiciansId,
           'imgList': [sealUrl + '', sideUrl + '', orgUrl + '']
         });

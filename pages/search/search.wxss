@@ -93,7 +93,7 @@
 	position: absolute;
 	left:50%;
 	transform: translate(-50%,0);
-	/*bottom:35rpx;*/
+	bottom:0rpx;
 	/*background-color: pink;*/
 	margin:0 auto;
 	text-align: center;
@@ -105,7 +105,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
-  height:175rpx;
+  height:185rpx;
   line-height: 38rpx;
 }
 /*搜索框（选择名家、搜索按钮）*/
@@ -182,7 +182,6 @@
 /*选中状态*/
 .author-item>.active{
 	box-sizing: border-box;
-	padding-top:5rpx;
 	background-color: #fff;
 	color:#B4A292;
 	width:60rpx;
@@ -194,7 +193,6 @@
 /*未选中状态*/
 .author-item>.not-active{
 	box-sizing: border-box;
-	padding-top:5rpx;
 	color:#fff;
 	background-color: #BAA99A;
 	width:60rpx;
